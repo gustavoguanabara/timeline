@@ -118,6 +118,52 @@
 .pos-2 { color: #c0caf5; font-weight: bold; }
 .pos-3 { color: #ff9e64; font-weight: bold; }
 
+/* Destaque de Linha no Hall da Fama (Último Recorde ou Líder) */
+.leaderboard-table tr.row-highlight td {
+  background: linear-gradient(90deg, rgba(115, 218, 202, 0.22), rgba(125, 207, 255, 0.12));
+  color: #ffffff;
+  border-top: 1px solid rgba(115, 218, 202, 0.55);
+  border-bottom: 1px solid rgba(115, 218, 202, 0.55);
+  box-shadow: inset 0 0 12px rgba(115, 218, 202, 0.18);
+}
+
+.leaderboard-table tr.row-highlight:hover td {
+  background: linear-gradient(90deg, rgba(115, 218, 202, 0.3), rgba(125, 207, 255, 0.18));
+}
+
+.leaderboard-table tr.row-highlight td:first-child {
+  border-left: 3px solid var(--accent-neon);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.leaderboard-table tr.row-highlight td:last-child {
+  border-right: 3px solid var(--accent-neon);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.badge-record-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  border-radius: 3px;
+  background: rgba(115, 218, 202, 0.22);
+  color: var(--accent-neon);
+  border: 1px solid var(--accent-neon);
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.badge-record-tag.leader {
+  background: rgba(224, 175, 104, 0.22);
+  color: #e0af68;
+  border-color: #e0af68;
+}
+
 .modal-footer {
   padding: 14px 20px;
   background: var(--bg-surface);
@@ -428,9 +474,7 @@
   width: 100%;
   max-width: 580px;
   height: 295px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  overflow: hidden;
   padding: 10px 14px 0 14px;
 }
 
@@ -460,6 +504,25 @@
   position: relative;
   z-index: 3;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* Cards da Timeline Superior (Iniciam juntos e se afastam quando o card sobe) */
+.tut-card-left {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -46px;
+  z-index: 3;
+  animation: tutCardLeftSplit 6s infinite ease-in-out;
+}
+
+.tut-card-right {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -46px;
+  z-index: 3;
+  animation: tutCardRightSplit 6s infinite ease-in-out;
 }
 
 .tut-card-photo {
@@ -617,55 +680,110 @@
 }
 
 /* KEYFRAMES DA ANIMAÇÃO DO TUTORIAL */
+
+/* Card da Esquerda (ENIAC 1946) afasta para a esquerda */
+@keyframes tutCardLeftSplit {
+  0%, 20% {
+    transform: translateX(-50px);
+  }
+  38%, 82% {
+    transform: translateX(-110px);
+  }
+  88%, 94% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+/* Card da Direita (Apple I 1976) afasta para a direita */
+@keyframes tutCardRightSplit {
+  0%, 20% {
+    transform: translateX(50px);
+  }
+  38%, 82% {
+    transform: translateX(110px);
+  }
+  88%, 94% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+
+/* Voo e Trajetória do Card Misterioso */
 @keyframes tutFlightTrajectory {
-  0%, 16% {
+  0%, 18% {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
   26% {
-    transform: translateY(-45px) scale(1.04);
+    transform: translateY(-40px) scale(1.04);
     opacity: 1;
   }
-  42% {
-    transform: translateY(-138px) scale(1.02);
+  40% {
+    transform: translateY(-136px) scale(1.02);
     opacity: 1;
   }
-  48%, 80% {
+  46%, 82% {
     transform: translateY(-144px) scale(1);
     opacity: 1;
   }
-  88% {
+  86% {
     transform: translateY(-144px) scale(1);
     opacity: 0;
   }
-  92% {
+  90% {
     transform: translateY(0) scale(1);
     opacity: 0;
   }
-  98%, 100% {
+  96%, 100% {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
 
+/* Drop Zone: Oculta no início (quando os cards estão juntos) e se abre no vão central */
 @keyframes tutDropZoneHighlight {
   0%, 20% {
-    border-color: rgba(115, 218, 202, 0.4);
-    box-shadow: none;
-  }
-  30%, 46% {
-    border-color: var(--accent-neon);
-    box-shadow: 0 0 16px rgba(115, 218, 202, 0.45);
-    background: rgba(115, 218, 202, 0.12);
-  }
-  50%, 85% {
+    opacity: 0;
+    transform: scale(0.35);
     border-color: rgba(115, 218, 202, 0.2);
     box-shadow: none;
     background: transparent;
   }
-  100% {
-    border-color: rgba(115, 218, 202, 0.4);
+  28% {
+    opacity: 0.8;
+    transform: scale(0.85);
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 12px rgba(115, 218, 202, 0.35);
+    background: rgba(115, 218, 202, 0.08);
+  }
+  38%, 46% {
+    opacity: 1;
+    transform: scale(1);
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 18px rgba(115, 218, 202, 0.5);
+    background: rgba(115, 218, 202, 0.12);
+  }
+  50%, 82% {
+    opacity: 1;
+    transform: scale(1);
+    border-color: rgba(115, 218, 202, 0.2);
     box-shadow: none;
+    background: transparent;
+  }
+  88% {
+    opacity: 0;
+    transform: scale(0.35);
+    box-shadow: none;
+    background: transparent;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.35);
   }
 }
 

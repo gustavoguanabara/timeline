@@ -6,6 +6,33 @@
 import { loadTop10Seed } from './data-loader.js';
 
 const STORAGE_KEY = 'historia_tecnologia_top10';
+const LAST_PLAYER_RECORD_KEY = 'historia_tecnologia_last_player_record';
+
+/**
+ * Retorna os dados do último recorde registrado pelo jogador
+ * @returns {{nome: string, pontos: number, data: string}|null}
+ */
+export function getLastPlayerRecord() {
+  const local = localStorage.getItem(LAST_PLAYER_RECORD_KEY);
+  if (!local) return null;
+  try {
+    return JSON.parse(local);
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Persiste a referência do último recorde registrado pelo jogador
+ * @param {{nome: string, pontos: number, data: string}} record
+ */
+export function setLastPlayerRecord(record) {
+  if (record) {
+    localStorage.setItem(LAST_PLAYER_RECORD_KEY, JSON.stringify(record));
+  } else {
+    localStorage.removeItem(LAST_PLAYER_RECORD_KEY);
+  }
+}
 
 /**
  * Obtém a lista atual do Top 10 (do localStorage ou da semente estática)
@@ -59,6 +86,7 @@ export async function addRecord(initials, score) {
     data: new Date().toISOString()
   };
 
+  setLastPlayerRecord(entry);
   list.push(entry);
 
   // Ordenação: 1º Pontos decrescente, 2º Data crescente (quem fez primeiro)

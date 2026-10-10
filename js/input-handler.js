@@ -2,10 +2,15 @@
  * js/input-handler.js
  * Captura unificada de interações (Mouse, Touch e Pen) via Pointer Events
  * Suporta mecânica híbrida:
- *   1. Arraste com o dedo com elevação (Lift Offset) para não cobrir o card nem a Drop Zone.
- *   2. Modo Toque Direto (Tap-to-Place): Toque no card do deck + Toque na Drop Zone [+].
- *   3. Swipe com inércia (momentum scroll) na Linha do Tempo.
- *   4. Detecção tolerante de toque em cards fixados para abrir curiosidades históricas.
+ *   1. Pan/Swipe fluido na Linha do Tempo:
+ *      - Rastreamento 1:1 de latência zero com o dedo.
+ *      - Resistência elástica nas bordas (rubber-band) com snap-back suave.
+ *      - Cálculo de velocidade real de arremesso (flick) nos últimos 100ms.
+ *      - Desaceleração física exponencial com atrito natural a 60/120 FPS.
+ *      - Parada tátil imediata ao encostar o dedo durante o deslizamento.
+ *   2. Arraste com o dedo com elevação (Lift Offset) para não cobrir o card nem a Drop Zone.
+ *   3. Modo Toque Direto (Tap-to-Place): Toque no card do deck + Toque na Drop Zone [+].
+ *   4. Detecção ergonômica de toque para abrir detalhes históricos sem falso disparo durante swipes.
  */
 
 import { triggerHaptic } from './audio.js';
@@ -20,11 +25,12 @@ export class InputHandler {
     this.interactionType = null; // 'DECK_CARD' | 'DRAG_CARD' | 'PAN_TIMELINE' | 'NAV_BTN' | 'NONE'
     this.startCoords = { x: 0, y: 0 };
     this.lastPointerX = 0;
-    this.pointerVelocityX = 0;
-    this.lastMoveTime = 0;
     this.hasMovedSignificantly = false;
     this.clickedTimelineCard = null;
     this.pointerType = 'mouse';
+
+    // Histórico circular para cálculo preciso de velocidade de arremesso (flick)
+    this.moveHistory = [];
 
     // Conectar callback de vibração sutil ao alinhar com uma Drop Zone
     this.renderer.onDropZoneHoverChange = (zoneIndex) => {
@@ -54,11 +60,11 @@ export class InputHandler {
     this.canvas.addEventListener('pointerup', (e) => this.onPointerUp(e));
     this.canvas.addEventListener('pointercancel', (e) => this.onPointerUp(e));
 
-    // Roda do mouse para rolagem lateral da linha do tempo
+    // Roda do mouse para rolagem lateral suave da linha do tempo
     this.canvas.addEventListener('wheel', (e) => {
       e.preventDefault();
       const delta = (Math.abs(e.deltaX) > Math.abs(e.deltaY)) ? e.deltaX : e.deltaY;
-      this.renderer.shiftTimeline(-delta * 0.8);
+      this.renderer.shiftTimeline(-delta * 0.85);
     }, { passive: false });
   }
 
@@ -66,8 +72,6 @@ export class InputHandler {
     this.isPointerDown = true;
     this.hasMovedSignificantly = false;
     this.pointerType = e.pointerType || 'mouse';
-    this.lastMoveTime = Date.now();
-    this.pointerVelocityX = 0;
 
     try {
       this.canvas.setPointerCapture(e.pointerId);
@@ -77,15 +81,22 @@ export class InputHandler {
     this.startCoords = { ...coords };
     this.lastPointerX = coords.x;
     const r = this.renderer;
+
     r.dragPointerType = this.pointerType;
     r.rawPointerX = coords.x;
     r.rawPointerY = coords.y;
 
+    // Se a timeline estava deslizando com inércia, parar imediatamente ao toque (tactile catch)
+    if (r.panMomentum !== 0) {
+      r.panMomentum = 0;
+      r.targetTimelineOffsetX = r.timelineOffsetX;
+    }
+
     // 1. Verificar clique nos botões de navegação lateral (◀ ▶) com área de toque ampliada
     const centerY = r.timelineCenterY;
     const btnSize = r.isMobile ? 32 : 36;
-    const hitAreaH = 46;
-    const hitAreaW = r.isMobile ? 46 : 40;
+    const hitAreaH = 48;
+    const hitAreaW = r.isMobile ? 48 : 42;
     const margin = r.isMobile ? 8 : 12;
 
     // Botão Esquerda ◀
@@ -171,32 +182,29 @@ export class InputHandler {
       }
     }
 
-    // 5. Iniciar Pan Horizontal da Linha do Tempo
+    // 5. Iniciar Pan Horizontal da Linha do Tempo com ancoragem visual precisa
     this.interactionType = 'PAN_TIMELINE';
     r.isDraggingTimeline = true;
     r.panMomentum = 0;
     r.panStartX = coords.x;
-    r.panStartOffsetX = r.targetTimelineOffsetX;
+    r.panStartOffsetX = r.timelineOffsetX; // Usa o offset visual atual para evitar qualquer salto
+    this.moveHistory = [{ x: coords.x, time: Date.now() }];
+
+    this.canvas.style.cursor = 'grabbing';
   }
 
   onPointerMove(e) {
     const coords = this.getCanvasCoords(e);
     const r = this.renderer;
     const isTouch = (this.pointerType === 'touch');
-
-    // Calcular velocidade e timestamp para inércia
     const now = Date.now();
-    const deltaX = coords.x - this.lastPointerX;
-    this.pointerVelocityX = deltaX;
-    this.lastPointerX = coords.x;
-    this.lastMoveTime = now;
 
     r.rawPointerX = coords.x;
     r.rawPointerY = coords.y;
 
     if (this.isPointerDown) {
       const dist = Math.hypot(coords.x - this.startCoords.x, coords.y - this.startCoords.y);
-      const threshold = isTouch ? 12 : 6;
+      const threshold = isTouch ? 8 : 4;
 
       if (dist > threshold) {
         this.hasMovedSignificantly = true;
@@ -207,25 +215,46 @@ export class InputHandler {
         this.interactionType = 'DRAG_CARD';
         r.isDraggingCard = true;
         r.isCardSelected = false; // Arraste sobrepõe seleção
-        r.dragVelocityX = 0;
         r.hoverDropZoneIndex = -1;
         triggerHaptic(15);
         if (this.options.onPickSound) this.options.onPickSound();
       }
 
+      // Arraste do card ativo
       if (this.interactionType === 'DRAG_CARD') {
         r.dragX = coords.x;
         // Lift Offset no Touch: eleva o card em 70px para que o dedo não tape a foto nem o alvo
         r.dragY = isTouch ? coords.y - r.touchLiftOffset : coords.y;
-        r.dragVelocityX = deltaX;
+        r.dragVelocityX = coords.x - this.lastPointerX;
         r.updateHoverDropZoneOnDrag();
+        this.lastPointerX = coords.x;
         return;
       }
 
+      // Pan interativo da linha do tempo com resposta direta 1:1
       if (this.interactionType === 'PAN_TIMELINE') {
+        // Registrar pontos para cálculo preciso de arremesso (flick)
+        this.moveHistory.push({ x: coords.x, time: now });
+        while (this.moveHistory.length > 2 && now - this.moveHistory[0].time > 100) {
+          this.moveHistory.shift();
+        }
+
         const panDelta = coords.x - r.panStartX;
-        r.targetTimelineOffsetX = r.panStartOffsetX + panDelta;
-        r.clampTimelineOffset();
+        let newOffset = r.panStartOffsetX + panDelta;
+
+        // Efeito elástico sutil (rubber-band) nas extremidades para sensação física agradável
+        const bounds = r.getTimelineBounds();
+        if (newOffset > bounds.max) {
+          const over = newOffset - bounds.max;
+          newOffset = bounds.max + over * 0.35;
+        } else if (newOffset < bounds.min) {
+          const under = bounds.min - newOffset;
+          newOffset = bounds.min - under * 0.35;
+        }
+
+        r.targetTimelineOffsetX = newOffset;
+        r.timelineOffsetX = newOffset; // Atualização síncrona 1:1 em tempo real com o dedo!
+        this.lastPointerX = coords.x;
         return;
       }
     } else {
@@ -256,6 +285,9 @@ export class InputHandler {
     const r = this.renderer;
     const coords = this.getCanvasCoords(e);
     const isTouch = (this.pointerType === 'touch');
+    const now = Date.now();
+
+    this.canvas.style.cursor = 'default';
 
     // 1. Toque rápido no card do Deck sem arrastar (Ativar/Desativar Tap-to-Place)
     if (this.interactionType === 'DECK_CARD') {
@@ -286,22 +318,46 @@ export class InputHandler {
       }
     }
 
-    // 3. Conclusão de Pan da Régua e Inércia (Swipe Momentum)
+    // 3. Conclusão de Pan da Régua e Disparo de Inércia Física (Flick)
     if (this.interactionType === 'PAN_TIMELINE') {
       r.isDraggingTimeline = false;
-      r.clampTimelineOffset();
 
-      // Aplicar inércia de swipe se soltou em movimento rápido
-      const timeSinceMove = Date.now() - this.lastMoveTime;
-      if (timeSinceMove < 90 && Math.abs(this.pointerVelocityX) > 2) {
-        r.panMomentum = this.pointerVelocityX * (isTouch ? 1.6 : 1.3);
+      const bounds = r.getTimelineBounds();
+      let flickVelocity = 0;
+
+      // Calcular velocidade vetorial usando a janela temporal dos últimos 100ms
+      if (this.moveHistory && this.moveHistory.length >= 2) {
+        const oldest = this.moveHistory[0];
+        const newest = this.moveHistory[this.moveHistory.length - 1];
+        const dt = newest.time - oldest.time;
+        const dx = newest.x - oldest.x;
+
+        if (dt > 10 && (now - newest.time) < 80) {
+          flickVelocity = (dx / dt) * 16.67; // Converte px/ms para px por quadro (60fps)
+        }
       }
 
-      // Se não houve arraste significativo e tocou em um card fixado, abrir detalhes
-      const clickTolerance = isTouch ? 14 : 6;
-      const totalMoved = Math.hypot(coords.x - this.startCoords.x, coords.y - this.startCoords.y);
+      // Se soltou fora dos limites (overscroll com rubber-band), o snap-back suave recupera os limites
+      if (r.timelineOffsetX > bounds.max) {
+        r.targetTimelineOffsetX = bounds.max;
+        r.panMomentum = 0;
+      } else if (r.timelineOffsetX < bounds.min) {
+        r.targetTimelineOffsetX = bounds.min;
+        r.panMomentum = 0;
+      } else if (Math.abs(flickVelocity) > 1.5) {
+        // Aplicar inércia de arremesso suave e natural
+        const maxVelocity = isTouch ? 42 : 32;
+        r.panMomentum = Math.max(-maxVelocity, Math.min(maxVelocity, flickVelocity * (isTouch ? 1.25 : 1.1)));
+        triggerHaptic(10);
+      } else {
+        r.panMomentum = 0;
+      }
 
-      if (totalMoved <= clickTolerance && this.clickedTimelineCard) {
+      // Se foi um toque pontual (sem movimento significativo) em um card da timeline, abrir detalhes
+      const totalMoved = Math.hypot(coords.x - this.startCoords.x, coords.y - this.startCoords.y);
+      const clickTolerance = isTouch ? 10 : 5;
+
+      if (totalMoved <= clickTolerance && this.clickedTimelineCard && !this.hasMovedSignificantly) {
         triggerHaptic(15);
         if (this.options.onCardClick) {
           this.options.onCardClick(this.clickedTimelineCard);
@@ -311,5 +367,6 @@ export class InputHandler {
 
     this.interactionType = null;
     this.clickedTimelineCard = null;
+    this.moveHistory = [];
   }
 }

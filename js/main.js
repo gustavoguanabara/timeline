@@ -4,7 +4,7 @@
  */
 
 import { loadHistoria, loadTop10Seed, getEligibleCategories, preloadImage, preloadBatch } from './data-loader.js';
-import { getLeaderboard, isEligibleForTop10, addRecord, exportTop10JSON } from './leaderboard.js';
+import { getLeaderboard, isEligibleForTop10, addRecord, exportTop10JSON, getLastPlayerRecord } from './leaderboard.js';
 import { playCardPick, playSuccess, playError, playFanfare, isAudioMuted, toggleAudioMute } from './audio.js';
 import { CanvasRenderer } from './canvas-renderer.js';
 import { InputHandler } from './input-handler.js';
@@ -548,14 +548,52 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Modal Hall da Fama
   async function renderLeaderboard() {
     const list = await getLeaderboard();
+    const lastRecord = getLastPlayerRecord();
+
+    // Determina qual linha destacar:
+    // Se o jogador possui um recorde registrado no Top 10, destaca esse recorde.
+    // Se ainda não tem nenhum recorde registrado (ou não consta no Top 10), destaca o primeiro colocado.
+    let highlightIndex = -1;
+    let isPlayerRecord = false;
+
+    if (lastRecord) {
+      const foundIdx = list.findIndex(
+        (item) => item.data === lastRecord.data || (item.nome === lastRecord.nome && item.pontos === lastRecord.pontos && item.data === lastRecord.data)
+      );
+      if (foundIdx !== -1) {
+        highlightIndex = foundIdx;
+        isPlayerRecord = true;
+      }
+    }
+
+    if (highlightIndex === -1 && list.length > 0) {
+      highlightIndex = 0; // Primeiro colocado por padrão
+      isPlayerRecord = false;
+    }
+
     leaderboardBody.innerHTML = '';
-    list.forEach((item) => {
+    list.forEach((item, index) => {
       const tr = document.createElement('tr');
+      const isHighlighted = index === highlightIndex;
+      if (isHighlighted) {
+        tr.classList.add('row-highlight');
+      }
+
       const dateStr = item.data ? new Date(item.data).toLocaleDateString('pt-BR') : '-';
       const posClass = item.pos === 1 ? 'pos-1' : (item.pos === 2 ? 'pos-2' : (item.pos === 3 ? 'pos-3' : ''));
+
+      let badgeHtml = '';
+      if (isHighlighted) {
+        if (isPlayerRecord) {
+          badgeHtml = ' <span class="badge-record-tag" title="Seu último recorde registrado">⭐ SEU RECORDE</span>';
+        } else {
+          badgeHtml = ' <span class="badge-record-tag leader" title="Atual líder do Hall da Fama">👑 LÍDER</span>';
+        }
+      }
+
       tr.innerHTML = `
         <td class="${posClass}">#${item.pos}</td>
-        <td><strong>${item.nome}</strong></td>
+        <td><strong>${item.nome}</strong>${badgeHtml}</td>
         <td>${item.pontos}/10 pts</td>
         <td>${dateStr}</td>
       `;

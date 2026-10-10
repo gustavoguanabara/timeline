@@ -143,11 +143,24 @@ export class CanvasRenderer {
    */
   update() {
     // 0. Decaimento suave de inércia do swipe da linha do tempo (momentum)
-    if (!this.isDraggingTimeline && Math.abs(this.panMomentum) > 0.3) {
+    if (!this.isDraggingTimeline && Math.abs(this.panMomentum) > 0.2) {
       this.targetTimelineOffsetX += this.panMomentum;
-      this.panMomentum *= 0.92;
-      this.clampTimelineOffset();
-      if (Math.abs(this.panMomentum) <= 0.3) {
+      this.panMomentum *= 0.94; // Decaimento exponencial com atrito natural suave
+
+      // Frear suavemente ao atingir os limites
+      const bounds = this.getTimelineBounds();
+      if (this.targetTimelineOffsetX > bounds.max) {
+        this.targetTimelineOffsetX = bounds.max;
+        this.panMomentum = 0;
+      } else if (this.targetTimelineOffsetX < bounds.min) {
+        this.targetTimelineOffsetX = bounds.min;
+        this.panMomentum = 0;
+      }
+
+      // Sincronizar offset visual em tempo real a cada quadro de inércia
+      this.timelineOffsetX = this.targetTimelineOffsetX;
+
+      if (Math.abs(this.panMomentum) <= 0.2) {
         this.panMomentum = 0;
       }
     }
@@ -175,9 +188,14 @@ export class CanvasRenderer {
       }
     }
 
-    // 2. Interpolação suave do Pan Horizontal da Linha do Tempo em repouso
-    if (!this.isDraggingTimeline && !this.isDraggingCard && Math.abs(this.panMomentum) <= 0.3) {
-      this.timelineOffsetX += (this.targetTimelineOffsetX - this.timelineOffsetX) * 0.15;
+    // 2. Interpolação suave em repouso (para snap-back elástico ou botões laterais ◀ ▶)
+    if (!this.isDraggingTimeline && !this.isDraggingCard && Math.abs(this.panMomentum) <= 0.2) {
+      const diff = this.targetTimelineOffsetX - this.timelineOffsetX;
+      if (Math.abs(diff) > 0.2) {
+        this.timelineOffsetX += diff * 0.18;
+      } else {
+        this.timelineOffsetX = this.targetTimelineOffsetX;
+      }
     }
 
     // 3. Interpolação suave de card em animação de soltura/encaixe
@@ -966,22 +984,28 @@ export class CanvasRenderer {
   }
 
   shiftTimeline(deltaX) {
+    this.panMomentum = 0;
     this.targetTimelineOffsetX += deltaX;
     this.clampTimelineOffset();
   }
 
-  clampTimelineOffset() {
+  getTimelineBounds() {
     const n = Math.max(1, this.timelineCards ? this.timelineCards.length : 1);
     const totalSpan = (n - 1) * (this.cardWidth + this.cardGap);
 
-    // Margem confortável para navegar antes do primeiro e após o último card
-    const margin = this.isMobile ? 150 : 220;
+    const margin = this.isMobile ? 120 : 180;
     const maxOffset = (this.width / 2) - this.timelineMarginLeft + margin;
     const minOffset = (this.width / 2) - (this.timelineMarginLeft + totalSpan) - margin;
 
-    const lower = Math.min(minOffset, maxOffset);
-    const upper = Math.max(minOffset, maxOffset);
-    this.targetTimelineOffsetX = Math.max(lower, Math.min(upper, this.targetTimelineOffsetX));
+    return {
+      min: Math.min(minOffset, maxOffset),
+      max: Math.max(minOffset, maxOffset)
+    };
+  }
+
+  clampTimelineOffset() {
+    const bounds = this.getTimelineBounds();
+    this.targetTimelineOffsetX = Math.max(bounds.min, Math.min(bounds.max, this.targetTimelineOffsetX));
   }
 
   /**

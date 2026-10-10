@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0f111a">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>História da Tecnologia — Game da Linha do Tempo</title>
+  <title>Projeto Timeline: a Evolução da Tecnologia</title>
   <meta name="description" content="Jogo educativo arcade de dedução cronológica dos marcos da história da tecnologia.">
+  
+  <!-- Favicons e Compatibilidade Universal (Chrome, Firefox, Edge, Safari macOS e Safari iOS) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components/hud.css">
   <link rel="stylesheet" href="css/components/modal.css">
   <link rel="stylesheet" href="css/components/responsive.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕹️</text></svg>">
 </head>
 <body class="theme-dark">
 
@@ -34,7 +40,7 @@
     </div>
 
     <div class="hud-right">
-      <button id="btnHudHelp" class="btn-icon" title="Como Jogar (Ajuda)">❓</button>
+      <button id="btnHudHelp" class="btn-icon" title="Como Jogar (Ajuda)">📖</button>
       <button id="btnHudLeaderboard" class="btn-icon" title="Hall da Fama (TOP 10)">🏆</button>
       <button id="btnAudioToggle" class="btn-icon" title="Alternar Som (Mudo)">🔊</button>
     </div>
@@ -241,7 +247,7 @@
           <div class="tutorial-caption-bar">
             <span class="tut-cap-step">1. Analise o card da vez</span>
             <span class="tut-cap-sep">➔</span>
-            <span class="tut-cap-step">2. Arraste até o slot <strong class="neon-plus">+</strong></span>
+            <span class="tut-cap-step">2. Arraste para afastar e abrir espaço</span>
             <span class="tut-cap-sep">➔</span>
             <span class="tut-cap-step">3. Ano revelado (Verde = Acerto)</span>
           </div>
