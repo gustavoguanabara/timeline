@@ -1,0 +1,1568 @@
+[
+    {
+        "id": 1,
+        "ano": "-2400",
+        "resumo": "Invenção do Ábaco",
+        "país": "Babilônia",
+        "texto": "O ábaco é considerado um dos primeiros instrumentos mecânicos criados pela humanidade para operações aritméticas. Desenvolvido inicialmente na Mesopotâmia com canaletas e pedras, evoluiu para armações com contas deslizantes, sendo adotado e aperfeiçoado por chineses, gregos e romanos ao longo dos séculos como ferramenta essencial de cálculo.",
+        "categoria": "Inventores e invenções",
+        "ref": "abaco-2400"
+    },
+    {
+        "id": 2,
+        "ano": "-100",
+        "resumo": "Máquina de Anticítera",
+        "país": "Grécia",
+        "texto": "Descoberto em um naufrágio próximo à ilha de Anticítera, este dispositivo de engrenagens de bronze é considerado o primeiro computador analógico do mundo. Ele calculava posições astronômicas, eclipses e os ciclos dos Jogos Olímpicos com extrema precisão, demonstrando uma sofisticação em engenharia mecânica que só voltaria a ser vista na Europa mais de mil anos depois.",
+        "categoria": "Inventores e invenções",
+        "ref": "maquina-anticitera-100"
+    },
+    {
+        "id": 3,
+        "ano": "820",
+        "resumo": "Álgebra e Algoritmos",
+        "país": "Pérsia",
+        "texto": "O matemático persa Muhammad ibn Musa al-Khwarizmi publicou tratados fundamentais sobre métodos sistemáticos de resolução de equações. Seu nome latinizado originou o termo 'algoritmo', e sua obra 'Al-Jabr' nomeou a álgebra, estabelecendo a lógica formal de procedimentos passo a passo necessária para toda a ciência da computação futura.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "algebra-algoritmos-820"
+    },
+    {
+        "id": 4,
+        "ano": "1614",
+        "resumo": "Ossos de Napier",
+        "país": "Escócia",
+        "texto": "John Napier introduziu os logaritmos e inventou os 'Ossos de Napier' (barras numeradas de marfim ou madeira). A ferramenta permitia realizar multiplicações e divisões complexas por meio de simples adições e subtrações, acelerando cálculos astronômicos e servindo de ponte direta para a criação da régua de cálculo.",
+        "categoria": "Inventores e invenções",
+        "ref": "ossos-napier-1614"
+    },
+    {
+        "id": 5,
+        "ano": "1622",
+        "resumo": "Régua de Cálculo",
+        "país": "Inglaterra",
+        "texto": "William Oughtred inventou a régua de cálculo utilizando escalas logarítmicas baseadas nos princípios de John Napier. O instrumento analógico permitiu a cientistas e engenheiros realizar multiplicações, divisões e funções trigonométricas com agilidade e portabilidade mecânica, permanecendo como ferramenta padrão de cálculo em projetos de engenharia até o advento das calculadoras eletrônicas de bolso no final do século XX.",
+        "categoria": "Inventores e invenções",
+        "ref": "regua-calculo-1622"
+    },
+    {
+        "id": 6,
+        "ano": "1642",
+        "resumo": "Criação da Pascalina",
+        "país": "França",
+        "texto": "Blaise Pascal desenvolveu a Pascalina aos 19 anos para auxiliar seu pai na arrecadação de impostos. Primeira calculadora mecânica funcional a ser patenteada e comercializada, utilizava engrenagens interligadas com transporte decimal automático para realizar somas e subtrações diretas.",
+        "categoria": "Inventores e invenções",
+        "ref": "pascalina-1642"
+    },
+    {
+        "id": 7,
+        "ano": "1673",
+        "resumo": "Stepped Reckoner",
+        "país": "Alemanha",
+        "texto": "Gottfried Wilhelm Leibniz construiu o Stepped Reckoner, máquina mecânica capaz de multiplicar, dividir e extrair raízes quadradas. Leibniz também formalizou a lógica do sistema binário moderno (0 e 1), antecipando a base da representação digital dos processadores eletrônicos.",
+        "categoria": "Inventores e invenções",
+        "ref": "stepped-reckoner-1673"
+    },
+    {
+        "id": 8,
+        "ano": "1801",
+        "resumo": "Tear de Jacquard",
+        "país": "França",
+        "texto": "Joseph-Marie Jacquard inventou um tear mecânico automatizado controlado por cartões perfurados. A presença ou ausência de furos orientava as agulhas para tecer padrões têxteis complexos, marcando a primeira implementação prática de instruções programáveis em hardware da história.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "tear-jacquard-1801"
+    },
+    {
+        "id": 9,
+        "ano": "1822",
+        "resumo": "Motor Diferencial",
+        "país": "Reino Unido",
+        "texto": "Charles Babbage projetou o Motor Diferencial, máquina a vapor concebida para tabular polinômios e eliminar erros humanos em tabelas matemáticas e astronômicas. Embora o modelo em escala real não tenha sido concluído na época por restrições de usinagem, o projeto provou a viabilidade do cálculo automático.",
+        "categoria": "Inventores e invenções",
+        "ref": "motor-diferencial-1822"
+    },
+    {
+        "id": 10,
+        "ano": "1837",
+        "resumo": "Motor Analítico",
+        "país": "Reino Unido",
+        "texto": "Charles Babbage concebeu o Motor Analítico, o primeiro computador mecânico de uso geral. O projeto continha os quatro blocos fundamentais dos computadores modernos: unidade central de cálculo ('mill'), memória persistente ('store'), leitor de cartões perfurados e mecanismo de saída impressa.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "motor-analitico-1837"
+    },
+    {
+        "id": 11,
+        "ano": "1837",
+        "resumo": "Telégrafo Elétrico",
+        "país": "EUA",
+        "texto": "Samuel Morse desenvolveu o primeiro sistema funcional de telégrafo eletromagnético e o código de pontos e traços que leva seu nome. Ao permitir a transmissão quase instantânea de mensagens de texto a longa distância através de fios metálicos, a tecnologia estabeleceu o nascimento das telecomunicações elétricas mundiais e inspirou as futuras redes de computadores.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "telegrafo-eletrico-1837"
+    },
+    {
+        "id": 12,
+        "ano": "1843",
+        "resumo": "Primeiro Programa de Código",
+        "país": "Reino Unido",
+        "texto": "Ada Lovelace publicou notas sobre o Motor Analítico de Babbage com um algoritmo detalhado para tabular números de Bernoulli. Por esse feito, tornou-se a primeira programadora da história, prevendo também que máquinas computacionais poderiam processar notas musicais, símbolos e textos.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "primeiro-programa-codigo-1843"
+    },
+    {
+        "id": 13,
+        "ano": "1847",
+        "resumo": "Álgebra Booleana",
+        "país": "Reino Unido",
+        "texto": "George Boole publicou 'The Mathematical Analysis of Logic', introduzindo uma álgebra em que as variáveis assumem apenas valores binários de verdadeiro ou falso. Décadas depois, esse formalismo tornou-se a linguagem lógica essencial para o design de circuitos integrados e portas lógicas digitais.",
+        "categoria": "Fato histórico",
+        "ref": "algebra-booleana-1847"
+    },
+    {
+        "id": 14,
+        "ano": "1876",
+        "resumo": "Patente do Telefone",
+        "país": "EUA",
+        "texto": "Alexander Graham Bell registrou a patente do telefone elétrico, aparelho capaz de converter vibrações acústicas da voz humana em ondas elétricas contínuas transmitidas por condutores metálicos. A invenção inaugurou a indústria moderna de telecomunicações de voz em tempo real e pavimentou a infraestrutura de cabeamento e comutação que mais tarde conectou a Internet.",
+        "categoria": "Inventores e invenções",
+        "ref": "patente-telefone-1876"
+    },
+    {
+        "id": 15,
+        "ano": "1890",
+        "resumo": "Tabuladora de Hollerith",
+        "país": "EUA",
+        "texto": "Herman Hollerith criou uma máquina eletromecânica de leitura por cartões perfurados para processar o censo norte-americano de 1890. O equipamento reduziu o tempo de análise de quase dez anos para menos de três anos. Em 1896, Hollerith fundou a empresa que mais tarde formaria a IBM.",
+        "categoria": "Inventores e invenções",
+        "ref": "tabuladora-hollerith-1890"
+    },
+    {
+        "id": 16,
+        "ano": "1895",
+        "resumo": "Telegrafia Sem Fio e Rádio",
+        "país": "Itália",
+        "texto": "Guglielmo Marconi realizou as primeiras transmissões bem-sucedidas de sinais de rádio por ondas eletromagnéticas sem fios físicos. O avanço abriu a era da radiodifusão e das comunicações sem fio em longa distância, servindo como base física e conceitual direta para as redes celulares de dados, transmissões por satélite e conexões Wi-Fi do mundo moderno.",
+        "categoria": "Inventores e invenções",
+        "ref": "telegrafia-sem-fio-radio-1895"
+    },
+    {
+        "id": 17,
+        "ano": "1898",
+        "resumo": "Gravação Magnética de Som",
+        "país": "Dinamarca",
+        "texto": "Valdemar Poulsen patenteou o Telegrafone, o primeiro dispositivo operacional de gravação sonora magnética em fio de aço. O princípio de magnetizar materiais condutores para guardar informações de forma regravável e não volátil estabeleceu as bases técnicas de todo o armazenamento digital moderno, como fitas magnéticas, cartuchos de dados e discos rígidos de computadores.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "gravacao-magnetica-som-1898"
+    },
+    {
+        "id": 18,
+        "ano": "1904",
+        "resumo": "Válvula Termoiônica",
+        "país": "Reino Unido",
+        "texto": "John Ambrose Fleming inventou a válvula diodo a vácuo, logo expandida pelo triodo de Lee de Forest em 1906. As válvulas permitiram amplificar e comutar sinais elétricos em alta frequência sem peças móveis, viabilizando os primeiros computadores totalmente eletrônicos.",
+        "categoria": "Inventores e invenções",
+        "ref": "valvula-termoionica-1904"
+    },
+    {
+        "id": 19,
+        "ano": "1911",
+        "resumo": "Fundação da CTR (IBM)",
+        "país": "EUA",
+        "texto": "Charles Ranlett Flint fundou a Computing-Tabulating-Recording Company (CTR) unindo fabricantes de balanças industriais, registradores de ponto e tabuladoras mecânicas. Sob a presidência de Thomas J. Watson, a empresa foi rebatizada em 1924 como International Business Machines (IBM).",
+        "categoria": "Fundação de empresas",
+        "ref": "ctr-ibm-1911"
+    },
+    {
+        "id": 20,
+        "ano": "1928",
+        "resumo": "Teorema de Nyquist",
+        "país": "EUA",
+        "texto": "Harry Nyquist publicou artigo demonstrando que sinais analógicos contínuos podem ser perfeitamente convertidos e reconstruídos em sequências discretas se amostrados em frequência correspondente ao dobro de sua largura de banda. A formalização matemática estabeleceu o alicerce essencial para a modulação por pulsos, digitalização de áudio, codecs de vídeo e comunicações em rede digital.",
+        "categoria": "Fato histórico",
+        "ref": "teorema-nyquist-1928"
+    },
+    {
+        "id": 21,
+        "ano": "1936",
+        "resumo": "Máquina Universal de Turing",
+        "país": "Reino Unido",
+        "texto": "Alan Turing publicou o artigo 'On Computable Numbers', introduzindo a Máquina de Turing teórica. O artigo demonstrou que um autômato universal com fita de leitura e gravação poderia computar qualquer tarefa calculável por algoritmo, estabelecendo a base teórica de toda a ciência da computação moderna.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "maquina-universal-turing-1936"
+    },
+    {
+        "id": 22,
+        "ano": "1937",
+        "resumo": "Circuitos e Boole",
+        "país": "EUA",
+        "texto": "Claude Shannon demonstrou em sua tese de mestrado no MIT que chaves liga/desliga e relés elétricos podiam implementar diretamente as equações da álgebra booleana. O estudo fundou o projeto de circuitos digitais e lançou as bases da Teoria da Informação.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "circuitos-boole-1937"
+    },
+    {
+        "id": 23,
+        "ano": "1939",
+        "resumo": "Computador Atanasoff-Berry",
+        "país": "EUA",
+        "texto": "John Vincent Atanasoff e Clifford Berry desenvolveram o computador ABC na Iowa State University. Foi a primeira máquina computacional eletrônica digital a adotar aritmética binária pura, válvulas a vácuo para processamento e memória com capacitores regenerativos, influenciando os conceitos de arquitetura que culminaram nos grandes computadores da década de 1940.",
+        "categoria": "Inventores e invenções",
+        "ref": "computador-atanasoff-berry-1939"
+    },
+    {
+        "id": 24,
+        "ano": "1941",
+        "resumo": "Computador Z3 de Zuse",
+        "país": "Alemanha",
+        "texto": "Konrad Zuse concluiu a construção do Z3, o primeiro computador eletromecânico totalmente automático, binário e programável do mundo. Com mais de 2.000 relés telefônicos e alimentado por filmes perfurados de 35 mm, a máquina realizava cálculos de aerodinâmica e dinâmica de asas.",
+        "categoria": "Inventores e invenções",
+        "ref": "computador-z3-zuse-1941"
+    },
+    {
+        "id": 25,
+        "ano": "1943",
+        "resumo": "Colossus em Bletchley",
+        "país": "Reino Unido",
+        "texto": "Tommy Flowers liderou a construção do computador Colossus em Bletchley Park para decifrar mensagens telegráficas criptografadas do alto comando nazista. Com cerca de 1.500 válvulas, foi o primeiro computador digital eletrônico e reconfigurável em escala operacional da história.",
+        "categoria": "Fato histórico",
+        "ref": "colossus-bletchley-1943"
+    },
+    {
+        "id": 26,
+        "ano": "1944",
+        "resumo": "Harvard Mark I",
+        "país": "EUA",
+        "texto": "Howard Aiken, em parceria com engenheiros da IBM, construiu o Harvard Mark I (ASCC), uma colossal calculadora eletromecânica de 15 metros de comprimento. Controlado por fita de papel perfurada, o equipamento foi amplamente utilizado pela Marinha norte-americana durante a Segunda Guerra Mundial e no Projeto Manhattan para calcular tabelas balísticas e físicas.",
+        "categoria": "Fato histórico",
+        "ref": "harvard-mark-i-1944"
+    },
+    {
+        "id": 27,
+        "ano": "1945",
+        "resumo": "Arquitetura Von Neumann",
+        "país": "EUA",
+        "texto": "John von Neumann formalizou no relatório preliminar do EDVAC o modelo de arquitetura onde instruções de programas e dados residem na mesma memória primária compartilhada e são executados sequencialmente pela CPU. O padrão continua sendo o alicerce da maioria dos computadores modernos.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "arquitetura-von-neumann-1945"
+    },
+    {
+        "id": 28,
+        "ano": "1945",
+        "resumo": "Primeiro Bug Registrado",
+        "país": "EUA",
+        "texto": "A equipe de Grace Hopper no computador Harvard Mark II localizou uma mariposa presa entre os contatos de um relé que impedia a execução dos cálculos. O inseto foi colado no livro de ocorrências com a nota 'primeiro caso real de inseto achado', consagrando mundialmente os jargões 'bug' e 'debug'.",
+        "categoria": "Fato histórico",
+        "ref": "primeiro-bug-registrado-1945"
+    },
+    {
+        "id": 29,
+        "ano": "1946",
+        "resumo": "Apresentação do ENIAC",
+        "país": "EUA",
+        "texto": "John Mauchly e J. Presper Eckert apresentaram o ENIAC na Universidade da Pensilvânia. Pesando 30 toneladas e composto por mais de 17.000 válvulas, calculava trajetórias balísticas e realizava cerca de 5.000 adições por segundo, superando a velocidade dos métodos eletromecânicos anteriores em mil vezes.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "eniac-1946"
+    },
+    {
+        "id": 30,
+        "ano": "1947",
+        "resumo": "Invenção do Transistor",
+        "país": "EUA",
+        "texto": "John Bardeen, Walter Brattain e William Shockley desenvolveram o primeiro transistor de contato de ponta nos Laboratórios Bell. Substituindo as válvulas por cristais semicondutores, o transistor viabilizou o baixo consumo energético, a confiabilidade operacional e a miniaturização eletrônica moderna.",
+        "categoria": "Inventores e invenções",
+        "ref": "transistor-1947"
+    },
+    {
+        "id": 31,
+        "ano": "1948",
+        "resumo": "Teoria da Informação",
+        "país": "EUA",
+        "texto": "Claude Shannon publicou o seminal artigo 'A Mathematical Theory of Communication', definindo matematicamente os conceitos de informação, ruído, entropia e compressão de dados. O artigo introduziu o termo 'bit' como unidade fundamental de medida da informação digital, estabelecendo as leis teóricas que regem a criptografia, compressão de arquivos e telecomunicações globais.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "teoria-informacao-1948"
+    },
+    {
+        "id": 32,
+        "ano": "1948",
+        "resumo": "Manchester Baby (SSEM)",
+        "país": "Reino Unido",
+        "texto": "Frederic Williams e Tom Kilburn construíram na Universidade de Manchester o Small-Scale Experimental Machine ('Baby'). O equipamento executou com sucesso o primeiro programa de computador mantido inteiramente na memória de leitura e escrita eletrônica interna (Tubo de Williams), provando a viabilidade prática do modelo de programa armazenado da computação moderna.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "manchester-baby-ssem-1948"
+    },
+    {
+        "id": 33,
+        "ano": "1949",
+        "resumo": "Operação do EDSAC",
+        "país": "Reino Unido",
+        "texto": "Maurice Wilkes e sua equipe na Universidade de Cambridge ativaram o EDSAC (Electronic Delay Storage Automatic Calculator). O equipamento foi o primeiro computador eletrônico prático e regular de programa armazenado a prestar serviços contínuos de cálculo a pesquisadores acadêmicos, introduzindo conceitos modernos de rotinas, sub-rotinas e bibliotecas de código reutilizável.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "edsac-1949"
+    },
+    {
+        "id": 34,
+        "ano": "1949",
+        "resumo": "Memória de Núcleo Magnético",
+        "país": "EUA",
+        "texto": "An Wang e Jay Forrester desenvolveram os conceitos da memória de núcleo de ferrite magnético. Adotada em larga escala no computador Whirlwind do MIT, essa tecnologia tornou-se o padrão dominante de memória de acesso aleatório de alta velocidade e não volátil para a indústria de computadores nas duas décadas seguintes, até a chegada dos chips de semicondutores.",
+        "categoria": "Inventores e invenções",
+        "ref": "memoria-nucleo-magnetico-1949"
+    },
+    {
+        "id": 35,
+        "ano": "1950",
+        "resumo": "Teste de Turing Proposto",
+        "país": "Reino Unido",
+        "texto": "Alan Turing publicou o artigo 'Computing Machinery and Intelligence', propondo o Teste de Turing para examinar se uma máquina consegue simular conversas humanas a ponto de ser indistinguível de uma pessoa. O trabalho inaugurou debates conceituais e éticos sobre cognição mecânica e IA.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "teste-turing-1950"
+    },
+    {
+        "id": 36,
+        "ano": "1951",
+        "resumo": "Lançamento do UNIVAC I",
+        "país": "EUA",
+        "texto": "O UNIVAC I tornou-se o primeiro computador comercial produzido em linha de montagem nos Estados Unidos, entregue ao Census Bureau. A máquina ganhou atenção pública mundial ao projetar com precisão a vitória de Dwight Eisenhower na eleição presidencial americana de 1952 para a rede CBS.",
+        "categoria": "Lançamento de produto",
+        "ref": "univac-i-1951"
+    },
+    {
+        "id": 37,
+        "ano": "1952",
+        "resumo": "Primeiro Compilador (A-0)",
+        "país": "EUA",
+        "texto": "Grace Hopper desenvolveu o sistema A-0, considerado o primeiro compilador da história da computação. O software traduzia instruções escritas em formato legível para linguagem de máquina pura, estabelecendo o conceito de abstração e abrindo caminho para linguagens de programação de alto nível.",
+        "categoria": "Inventores e invenções",
+        "ref": "primeiro-compilador-a0-1952"
+    },
+    {
+        "id": 38,
+        "ano": "1956",
+        "resumo": "Conferência de Dartmouth",
+        "país": "EUA",
+        "texto": "John McCarthy, Marvin Minsky, Nathaniel Rochester e Claude Shannon organizaram o workshop de verão em Dartmouth, onde o termo 'Inteligência Artificial' foi cunhado. O evento estabeleceu a premissa de que qualquer aspecto do aprendizado humano poderia ser modelado e reproduzido em computadores.",
+        "categoria": "Fato histórico",
+        "ref": "conferencia-dartmouth-1956"
+    },
+    {
+        "id": 39,
+        "ano": "1956",
+        "resumo": "Primeiro Disco Rígido (RAMAC)",
+        "país": "EUA",
+        "texto": "A IBM introduziu o sistema 305 RAMAC, que incluía o primeiro disco rígido comercial da história, desenvolvido sob liderança de Reynold Johnson. Pesando mais de uma tonelada e contendo 50 discos magnéticos de 24 polegadas, o aparelho armazenava 5 megabytes de dados com acesso aleatório direto, aposentando a lentidão da busca sequencial em fitas perfuradas e magnéticas.",
+        "categoria": "Lançamento de produto",
+        "ref": "primeiro-disco-rigido-ramac-1956"
+    },
+    {
+        "id": 40,
+        "ano": "1957",
+        "resumo": "Lançamento do FORTRAN",
+        "país": "EUA",
+        "texto": "Uma equipe da IBM liderada por John Backus lançou o FORTRAN (Formula Translation), primeira linguagem de programação de alto nível amplamente adotada. A ferramenta dispensava programadores da codificação manual em assembly, multiplicando a velocidade do desenvolvimento científico.",
+        "categoria": "Lançamento de produto",
+        "ref": "fortran-1957"
+    },
+    {
+        "id": 41,
+        "ano": "1958",
+        "resumo": "Circuito Integrado (Chip)",
+        "país": "EUA",
+        "texto": "Jack Kilby na Texas Instruments e Robert Noyce na Fairchild Semiconductor desenvolveram de forma independente os primeiros circuitos integrados. Unindo resistores, transistores e capacitores em uma única pastilha semicondutora, o chip viabilizou a revolução da microeletrônica moderna.",
+        "categoria": "Inventores e invenções",
+        "ref": "circuito-integrado-chip-1958"
+    },
+    {
+        "id": 42,
+        "ano": "1958",
+        "resumo": "Linguagem LISP Criada",
+        "país": "EUA",
+        "texto": "John McCarthy concebeu no Instituto de Tecnologia de Massachusetts a linguagem de programação LISP (List Processing). Projetada para manipulação de símbolos e computação não numérica, o LISP introduziu pioneiramente árvores de dados, recursão funcional e gerenciamento automático de memória por coleta de lixo, virando a linguagem padrão das primeiras décadas de pesquisa em IA.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-lisp-1958"
+    },
+    {
+        "id": 43,
+        "ano": "1959",
+        "resumo": "Criação do COBOL",
+        "país": "EUA",
+        "texto": "O comitê CODASYL, com influência direta dos trabalhos conceituais de Grace Hopper, desenvolveu o COBOL (Common Business-Oriented Language). Focada em aplicações corporativas com sintaxe estruturada em prosa semelhante ao inglês, a linguagem permitiu interoperabilidade entre fabricantes concorrentes e ainda hoje sustenta sistemas bancários e transacionais críticos mundiais.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "cobol-1959"
+    },
+    {
+        "id": 44,
+        "ano": "1959",
+        "resumo": "Transistor MOSFET",
+        "país": "EUA",
+        "texto": "Mohamed Atalla e Dawon Kahng inventaram nos Laboratórios Bell o transistor de efeito de campo de metal-óxido-semicondutor (MOSFET). Com sua camada de isolamento por dióxido de silício e baixo consumo de energia, o MOSFET tornou-se o dispositivo mais fabricado de toda a história humana, viabilizando a microeletrônica de alta densidade e os processadores modernos.",
+        "categoria": "Inventores e invenções",
+        "ref": "transistor-mosfet-1959"
+    },
+    {
+        "id": 45,
+        "ano": "1960",
+        "resumo": "Invenção do Primeiro Laser",
+        "país": "EUA",
+        "texto": "Theodore Maiman construiu o primeiro laser óptico operacional na Hughes Research Laboratories utilizando um cristal sintético de rubi. A emissão de luz coerente e concentrada viabilizou uma imensa gama de tecnologias computacionais posteriores, incluindo transmissões por fibra óptica intercontinentais, leitores de códigos de barras e sistemas ópticos como CD-ROM, DVD e Blu-ray.",
+        "categoria": "Inventores e invenções",
+        "ref": "primeiro-laser-1960"
+    },
+    {
+        "id": 46,
+        "ano": "1961",
+        "resumo": "Primeiro Robô Unimate",
+        "país": "EUA",
+        "texto": "George Devol e Joseph Engelberger instalaram o Unimate em uma fábrica da General Motors em Nova Jersey, o primeiro robô industrial automatizado da história. Equipado com braço mecânico hidráulico controlado por instruções digitais em tambor magnético, o robô manipulava peças pesadas de fundição sob calor extremo, dando início à automação robótica industrial.",
+        "categoria": "Robótica e Hardware",
+        "ref": "robo-unimate-1961"
+    },
+    {
+        "id": 47,
+        "ano": "1962",
+        "resumo": "Criação do Spacewar!",
+        "país": "EUA",
+        "texto": "Steve Russell, Martin Graetz e Wayne Wiitanen criaram o Spacewar! no computador DEC PDP-1 do MIT. Apresentando dois foguetes espaciais disputando combate orbital em tempo real na tela vetorial, o programa é reconhecido como o primeiro videogame digital influente e distribuído da história, inspirando a fundação da futura indústria de entretenimento digital e jogos eletrônicos.",
+        "categoria": "Fato histórico",
+        "ref": "spacewar-1962"
+    },
+    {
+        "id": 48,
+        "ano": "1963",
+        "resumo": "Código Padrão ASCII",
+        "país": "EUA",
+        "texto": "A American Standards Association homologou o código ASCII (American Standard Code for Information Interchange) de 7 bits para uniformizar a representação de caracteres alfanuméricos e comandos em computadores e teletipos. A padronização garantiu que diferentes fabricantes codificassem textos de forma compatível, servindo de matriz para o desenvolvimento do padrão Unicode.",
+        "categoria": "Leis e regras",
+        "ref": "codigo-ascii-1963"
+    },
+    {
+        "id": 49,
+        "ano": "1963",
+        "resumo": "Criação do Sketchpad",
+        "país": "EUA",
+        "texto": "Ivan Sutherland desenvolveu o Sketchpad no Laboratório Lincoln do MIT, considerado o marco fundador da computação gráfica interativa e dos softwares de desenho assistido por computador (CAD). Utilizando uma caneta óptica diretamente em uma tela CRT, o sistema permitiu a manipulação geométrica em tempo real e introduziu os conceitos pioneiros de instâncias e objetos gráficos que mais tarde moldariam as interfaces gráficas e a programação orientada a objetos.",
+        "categoria": "Inventores e invenções",
+        "ref": "sketchpad-1963"
+    },
+    {
+        "id": 50,
+        "ano": "1964",
+        "resumo": "Lançamento do IBM System/360",
+        "país": "EUA",
+        "texto": "A IBM introduziu a família System/360, revolucionando o mercado com uma linha de computadores com arquitetura compartilhada e código compatível entre modelos menores e maiores. O projeto consolidou o byte de 8 bits e estabeleceu o padrão de processamento de dados corporativo.",
+        "categoria": "Lançamento de produto",
+        "ref": "ibm-system-360-1964"
+    },
+    {
+        "id": 51,
+        "ano": "1964",
+        "resumo": "Linguagem BASIC Criada",
+        "país": "EUA",
+        "texto": "John Kemeny e Thomas Kurtz desenvolveram em Dartmouth a linguagem BASIC (Beginner's All-purpose Symbolic Instruction Code). Formulada com comandos simples em inglês voltados a estudantes não matemáticos, a linguagem democratizou o aprendizado de programação e tornou-se a plataforma embarcada padrão de quase todos os microcomputadores das décadas de 1970 e 1980.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-basic-1964"
+    },
+    {
+        "id": 52,
+        "ano": "1965",
+        "resumo": "Lei de Moore Formulada",
+        "país": "EUA",
+        "texto": "Gordon Moore publicou artigo notando que a densidade de transistores em circuitos integrados dobrava em intervalos regulares com custos em declínio. Ajustada para ciclos de aproximadamente dois anos, a Lei de Moore transformou-se no ritmo condutor do investimento de semicondutores no mundo.",
+        "categoria": "Leis e regras",
+        "ref": "lei-moore-1965"
+    },
+    {
+        "id": 53,
+        "ano": "1967",
+        "resumo": "Linguagem Simula 67 (POO)",
+        "país": "Noruega",
+        "texto": "Ole-Johan Dahl e Kristen Nygaard desenvolveram a linguagem Simula 67 no Centro de Computação da Noruega. Introduzindo formalmente os conceitos de classes, objetos, herança, subclasses e encapsulamento de estados, o Simula 67 fundou o paradigma de Programação Orientada a Objetos (POO), que orientou Smalltalk, C++, Java, Python e a arquitetura contemporânea de software.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-simula-67-1967"
+    },
+    {
+        "id": 54,
+        "ano": "1968",
+        "resumo": "A Mãe de Todas as Demos",
+        "país": "EUA",
+        "texto": "Douglas Engelbart realizou em San Francisco uma conferência de 90 minutos onde revelou simultaneamente o mouse de computador, telas com janelas gráficas, links de hipertexto, edição de texto colaborativa e chamadas de vídeo, estabelecendo a base da interação humana com computadores.",
+        "categoria": "Fato histórico",
+        "ref": "mae-todas-demos-1968"
+    },
+    {
+        "id": 55,
+        "ano": "1968",
+        "resumo": "Invenção da Memória DRAM",
+        "país": "EUA",
+        "texto": "Robert Dennard patenteou na IBM a célula de memória dinâmica de acesso aleatório (DRAM) composta por um único transistor e um capacitor. A arquitetura permitiu densidades de empacotamento em silício e baixos custos sem precedentes frente às memórias estáticas, transformando a DRAM no formato padrão de memória primária da indústria de computadores pessoais e servidores.",
+        "categoria": "Inventores e invenções",
+        "ref": "memoria-dram-1968"
+    },
+    {
+        "id": 56,
+        "ano": "1969",
+        "resumo": "Primeira Mensagem ARPANET",
+        "país": "EUA",
+        "texto": "Cientistas da UCLA e da Universidade de Stanford conectaram dois nós da rede ARPANET por meio de comutação de pacotes de dados. A tentativa de digitar a palavra 'LOGIN' derrubou o sistema após a transmissão das letras 'LO', mas a transmissão comprovou a viabilidade técnica da Internet.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "primeira-mensagem-arpanet-1969"
+    },
+    {
+        "id": 57,
+        "ano": "1969",
+        "resumo": "Desenvolvimento do Unix",
+        "país": "EUA",
+        "texto": "Ken Thompson, Dennis Ritchie e colegas dos Laboratórios Bell criaram o sistema operacional Unix. Estruturado com arquivos hierárquicos, utilitários modulares encadeáveis por pipes e portabilidade entre máquinas, o Unix serviu de matriz direta para os sistemas BSD, Linux, macOS e Android.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "unix-1969"
+    },
+    {
+        "id": 58,
+        "ano": "1969",
+        "resumo": "Robô Shakey com IA",
+        "país": "EUA",
+        "texto": "Pesquisadores do SRI International construíram o robô Shakey, o primeiro autômato móvel inteligente capaz de perceber seu ambiente, navegar com visão computacional e planejar ações autônomas para resolver tarefas complexas. O projeto inaugurou o algoritmo de busca A* e técnicas pioneiras de planejamento espacial que guiam robôs móveis e carros autônomos modernos.",
+        "categoria": "Robótica e Hardware",
+        "ref": "robo-shakey-ia-1969"
+    },
+    {
+        "id": 59,
+        "ano": "1969",
+        "resumo": "Software de Voo da Apollo 11",
+        "país": "EUA",
+        "texto": "A equipe liderada por Margaret Hamilton no Laboratório de Instrumentação do MIT desenvolveu o software de bordo assíncrono para o Apollo Guidance Computer (AGC). Durante a descida do módulo lunar da Apollo 11, o sistema evitou o abortamento da missão ao descartar tarefas secundárias quando os sensores de radar sobrecarregaram o processador, consolidando os fundamentos da Engenharia de Software moderna e sistemas operacionais de tempo real.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "software-voo-apollo-11-1969"
+    },
+    {
+        "id": 60,
+        "ano": "1970",
+        "resumo": "Modelo Relacional de Dados",
+        "país": "EUA",
+        "texto": "Edgar F. Codd publicou no laboratório da IBM o artigo 'A Relational Model of Data for Large Shared Data Banks'. Ao propor a organização de informações em tabelas matemáticas compostas por linhas e colunas independentes da estrutura física de armazenamento em disco, Codd estabeleceu a base de todos os sistemas gerenciadores de banco de dados relacionais (SGBD).",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "modelo-relacional-dados-1970"
+    },
+    {
+        "id": 61,
+        "ano": "1970",
+        "resumo": "Fibra Óptica de Baixa Perda",
+        "país": "EUA",
+        "texto": "Robert Maurer, Donald Keck e Peter Schultz da Corning Glass Works desenvolveram a primeira fibra óptica de sílica purificada com atenuação inferior a 20 dB por quilômetro. O avanço viabilizou a transmissão de pulsos de luz laser a longas distâncias, criando a espinha dorsal física que transporta os gigabits do tráfego intercontinental da Internet por cabos submarinos.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "fibra-optica-baixa-perda-1970"
+    },
+    {
+        "id": 62,
+        "ano": "1970",
+        "resumo": "Criação da Rede ALOHAnet",
+        "país": "EUA",
+        "texto": "Norman Abramson e pesquisadores da Universidade do Havaí colocaram em funcionamento a ALOHAnet, a primeira rede de comunicação sem fio a utilizar transmissão de dados digitais por pacotes em frequências de rádio UHF. O seu inovador protocolo de acesso aleatório e contenção ao canal compartilhado serviu como inspiração e base técnica direta para a invenção da Ethernet por Robert Metcalfe e para as futuras normas de Wi-Fi e telefonia celular.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "rede-alohanet-1970"
+    },
+    {
+        "id": 63,
+        "ano": "1971",
+        "resumo": "Microprocessador Intel 4004",
+        "país": "EUA",
+        "texto": "Federico Faggin, Ted Hoff e Stanley Mazor projetaram o Intel 4004, o primeiro microprocessador monocip comercial do mercado. Reagrupando 2.300 transistores em silício de 4 bits, o produto demonstrou que todas as funções centrais de uma CPU podiam operar dentro de um único chip.",
+        "categoria": "Lançamento de produto",
+        "ref": "microprocessador-intel-4004-1971"
+    },
+    {
+        "id": 64,
+        "ano": "1971",
+        "resumo": "Invenção do Disquete",
+        "país": "EUA",
+        "texto": "Uma equipe de engenharia da IBM liderada por Alan Shugart e David Noble inventou o disco flexível magnético de 8 polegadas para carregar microcódigo em sistemas de grande porte. A tecnologia evoluiu para formatos portáteis de 5,25 e 3,5 polegadas, transformando-se no primeiro meio universal de transporte de arquivos e distribuição comercial de software para PCs.",
+        "categoria": "Inventores e invenções",
+        "ref": "disquete-1971"
+    },
+    {
+        "id": 65,
+        "ano": "1971",
+        "resumo": "Primeiro E-mail em Rede",
+        "país": "EUA",
+        "texto": "O engenheiro Ray Tomlinson implementou na rede ARPANET o programa SNDMSG com a capacidade de remeter mensagens entre máquinas computacionais distintas. Tomlinson selecionou o símbolo '@' para separar o nome do destinatário do nome da máquina hospedeira em que sua caixa postal residia, estabelecendo a convenção global que moldou o correio eletrônico.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "primeiro-email-rede-1971"
+    },
+    {
+        "id": 66,
+        "ano": "1972",
+        "resumo": "Criação da Linguagem C",
+        "país": "EUA",
+        "texto": "Dennis Ritchie desenvolveu a linguagem de programação C nos Bell Labs para reescrever o núcleo do sistema Unix. Ao unir manipulação direta de memória com tipagem expressiva e portabilidade, tornou-se a linguagem de infraestrutura mais influente de sistemas operacionais e compilers.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-c-1972"
+    },
+    {
+        "id": 67,
+        "ano": "1972",
+        "resumo": "Lançamento do Pong pela Atari",
+        "país": "EUA",
+        "texto": "Criado pelo engenheiro Allan Alcorn e lançado no mercado pela recém-criada Atari de Nolan Bushnell, o jogo eletrônico Pong alcançou sucesso comercial massivo em fliperamas e versões domésticas para televisores. O título provou a viabilidade comercial do entretenimento eletrônico interativo em larga escala, dando a largada para a indústria global de videogames e acelerando o desenvolvimento de circuitos lógicos dedicados ao consumidor comum.",
+        "categoria": "Lançamento de produto",
+        "ref": "pong-atari-1972"
+    },
+    {
+        "id": 68,
+        "ano": "1973",
+        "resumo": "Xerox Alto Desenvolvido",
+        "país": "EUA",
+        "texto": "O laboratório Xerox PARC construiu o Xerox Alto, a primeira estação de trabalho pessoal com monitor bitmap vertical, interface gráfica orientada a ícones, mouse óptico de três botões e conexão local Ethernet. Suas inovações inspiraram o desenvolvimento do Apple Lisa, do Macintosh e do Windows.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "xerox-alto-1973"
+    },
+    {
+        "id": 69,
+        "ano": "1973",
+        "resumo": "Invenção da Rede Ethernet",
+        "país": "EUA",
+        "texto": "Robert Metcalfe e colegas no centro de pesquisas Xerox PARC inventaram o protocolo Ethernet para interligar computadores em redes locais (LAN) via cabos coaxiais compartilhados com detecção de colisões. A tecnologia tornou-se o padrão físico e de enlace dominante absoluto no mundo para conexão com fio em ambientes residenciais, corporativos e data centers.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "rede-ethernet-1973"
+    },
+    {
+        "id": 70,
+        "ano": "1973",
+        "resumo": "Primeira Ligação Celular",
+        "país": "EUA",
+        "texto": "Martin Cooper, engenheiro-chefe da Motorola, realizou a primeira chamada pública com um protótipo de telefone celular de mão DynaTAC em uma calçada de Nova York para seu rival na Bell Labs. O dispositivo pesava mais de um quilo e comprovou a viabilidade das redes celulares com células de transmissão contínua, inaugurando as telecomunicações portáteis sem fio.",
+        "categoria": "Inventores e invenções",
+        "ref": "primeira-ligacao-celular-1973"
+    },
+    {
+        "id": 71,
+        "ano": "1974",
+        "resumo": "Criação da Linguagem SQL",
+        "país": "EUA",
+        "texto": "Donald D. Chamberlin e Raymond F. Boyce desenvolveram no laboratório IBM San Jose a linguagem SEQUEL (posteriormente denominada SQL - Structured Query Language). Baseada na álgebra relacional de Codd, a linguagem padronizou a recuperação e manipulação declarativa de conjuntos de dados, tornando-se o padrão corporativo universal adotado por bancos de dados do mundo todo.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-sql-1974"
+    },
+    {
+        "id": 72,
+        "ano": "1975",
+        "resumo": "Fundação da Microsoft",
+        "país": "EUA",
+        "texto": "Bill Gates e Paul Allen fundaram a Microsoft para desenvolver um interpretador BASIC destinado ao microcomputador Altair 8800. A empresa estabeleceu um mercado bilionário fundamentado na venda de software empacotado e licenciado desvinculado dos fabricantes de máquinas.",
+        "categoria": "Fundação de empresas",
+        "ref": "microsoft-1975"
+    },
+    {
+        "id": 73,
+        "ano": "1975",
+        "resumo": "Lançamento do Altair 8800",
+        "país": "EUA",
+        "texto": "A empresa MITS lançou o kit de computador pessoal Altair 8800 na capa da revista Popular Electronics, equipado com o processador Intel 8080. O kit exigia montagem por solda e entrada de dados por chaves com lâmpadas LED, mas seu enorme sucesso popular detonou o movimento de computação pessoal na Costa Oeste e motivou Bill Gates e Paul Allen a fundar a Microsoft.",
+        "categoria": "Lançamento de produto",
+        "ref": "altair-8800-1975"
+    },
+    {
+        "id": 74,
+        "ano": "1976",
+        "resumo": "Fundação da Apple",
+        "país": "EUA",
+        "texto": "Steve Jobs, Steve Wozniak e Ronald Wayne fundaram a Apple Computer em Los Altos, Califórnia. Trabalhando na oficina doméstica, Wozniak desenhou o circuito unificado do Apple I, criando a base inicial para os primeiros computadores pessoais comercializados prontos para uso.",
+        "categoria": "Fundação de empresas",
+        "ref": "apple-1976"
+    },
+    {
+        "id": 75,
+        "ano": "1976",
+        "resumo": "Criptografia Diffie-Hellman",
+        "país": "EUA",
+        "texto": "Whitfield Diffie e Martin Hellman publicaram o estudo 'New Directions in Cryptography', introduzindo o método de troca de chaves criptográficas através de canais públicos inseguros. O trabalho rompeu com milênios de criptografia exclusivamente simétrica e fundou a moderna criptografia assimétrica de chave pública, indispensável para autenticação e segurança digital.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "criptografia-diffie-hellman-1976"
+    },
+    {
+        "id": 76,
+        "ano": "1977",
+        "resumo": "A Trindade de 1977",
+        "país": "EUA",
+        "texto": "O lançamento comercial simultâneo do Apple II, do Commodore PET e do TRS-80 da Tandy ficou conhecido como a 'Trindade de 1977'. Esses equipamentos trouxeram gabinetes fechados com teclados embutidos e saída para monitores domésticos, popularizando o microcomputador entre residências e salas de aula.",
+        "categoria": "Lançamento de produto",
+        "ref": "trindade-1977"
+    },
+    {
+        "id": 77,
+        "ano": "1977",
+        "resumo": "Algoritmo Criptográfico RSA",
+        "país": "EUA",
+        "texto": "Ron Rivest, Adi Shamir e Leonard Adleman criaram no MIT o algoritmo de chave pública RSA. Fundamentado na dificuldade matemática computacional da fatoração de números primos gigantescos, o sistema possibilitou cifrar dados e emitir assinaturas digitais verificáveis, tornando-se o pilar padrão de segurança para certificados digitais, e-commerce e conexões bancárias.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "algoritmo-rsa-1977"
+    },
+    {
+        "id": 78,
+        "ano": "1978",
+        "resumo": "Planilha VisiCalc",
+        "país": "EUA",
+        "texto": "Dan Bricklin e Bob Frankston desenvolveram o VisiCalc para o microcomputador Apple II. Sendo a primeira planilha eletrônica com cálculo automático e reatividade em grade, o programa é amplamente reconhecido como a aplicação assassina ('killer app') que transformou computadores pessoais de brinquedos de entusiastas em ferramentas indispensáveis de escritórios corporativos.",
+        "categoria": "Lançamento de produto",
+        "ref": "planilha-visicalc-1978"
+    },
+    {
+        "id": 79,
+        "ano": "1979",
+        "resumo": "Banco de Dados Oracle v2",
+        "país": "EUA",
+        "texto": "Larry Ellison, Bob Miner e Ed Oates lançaram a versão comercial do Oracle v2 por meio da empresa Relational Software Inc. (futura Oracle Corporation). Foi o primeiro sistema gerenciador de banco de dados comercial a implementar a linguagem SQL no mercado corporativo, consolidando uma indústria multibilionária de software de gerenciamento de dados de missão crítica.",
+        "categoria": "Fundação de empresas",
+        "ref": "oracle-v2-1979"
+    },
+    {
+        "id": 80,
+        "ano": "1979",
+        "resumo": "Criação da Usenet",
+        "país": "EUA",
+        "texto": "Tom Truscott e Jim Ellis, da Duke University e University of North Carolina, conceberam a Usenet, uma rede mundial descentralizada de notícias e grupos de discussão estruturada sobre conexões telefônicas via protocolo UUCP. Funcionando sem um servidor central, a Usenet popularizou a divisão temática de fóruns ('newsgroups'), cunhou convenções como FAQs, moderadores e netiqueta, e serviu como principal canal de colaboração acadêmica e comunitária antes da Web.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "usenet-1979"
+    },
+    {
+        "id": 81,
+        "ano": "1980",
+        "resumo": "Invenção da Memória Flash",
+        "país": "Japão",
+        "texto": "O engenheiro Fujio Masuoka inventou na Toshiba a memória flash (tanto a arquitetura NOR quanto a NAND). Permitindo que blocos inteiros de dados fossem apagados e regravados eletricamente em alta velocidade sem manter alimentação ativa, a inovação tornou-se a base de cartões de memória, pen drives, unidades de estado sólido (SSDs) e do armazenamento de smartphones.",
+        "categoria": "Inventores e invenções",
+        "ref": "memoria-flash-1980"
+    },
+    {
+        "id": 82,
+        "ano": "1981",
+        "resumo": "Lançamento do IBM PC",
+        "país": "EUA",
+        "texto": "A IBM lançou o modelo 5150 (IBM Personal Computer), adotando arquitetura modular aberta com processador Intel 8088 e o sistema operacional PC-DOS fornecido pela Microsoft. O sucesso estrondoso consolidou o uso profissional de PCs e criou a indústria global de máquinas compatíveis.",
+        "categoria": "Lançamento de produto",
+        "ref": "ibm-pc-1981"
+    },
+    {
+        "id": 83,
+        "ano": "1981",
+        "resumo": "Computador Quântico Teórico",
+        "país": "EUA",
+        "texto": "O físico Richard Feynman propôs em palestra no MIT que computadores clássicos não conseguem simular satisfatoriamente sistemas da física quântica sem explosão exponencial de processamento, sugerindo a construção de máquinas computacionais governadas pelas próprias leis da mecânica quântica. O conceito inaugurou teoricamente a área da computação quântica moderna.",
+        "categoria": "Computação Quântica",
+        "ref": "computador-quantico-teorico-1981"
+    },
+    {
+        "id": 84,
+        "ano": "1982",
+        "resumo": "Lançamento do Compact Disc",
+        "país": "Japão",
+        "texto": "A Sony e a Philips apresentaram conjuntamente o Compact Disc (CD) e seu formato de gravação digital óptica por raio laser infravermelho. A mídia revolucionou a preservação de música e logo foi adaptada para computadores como CD-ROM em 1984, oferecendo mais de 600 megabytes de capacidade óptica e viabilizando o boom de programas multimídia e enciclopédias interativas.",
+        "categoria": "Lançamento de produto",
+        "ref": "compact-disc-1982"
+    },
+    {
+        "id": 85,
+        "ano": "1982",
+        "resumo": "Padronização do Protocolo SMTP",
+        "país": "EUA",
+        "texto": "Jonathan Postel publicou a RFC 821, que formalizou o Simple Mail Transfer Protocol (SMTP) como o padrão aberto universal de transporte de mensagens de correio eletrônico na Internet. Operando com comandos textuais simples sobre conexões TCP confiáveis, o protocolo eliminou a fragmentação de formatos de rede proprietários e garantiu a interoperabilidade planetária do envio de e-mails, arquitetura que continua em operação na espinha dorsal da rede mundial.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "protocolo-smtp-1982"
+    },
+    {
+        "id": 86,
+        "ano": "1983",
+        "resumo": "Adoção do Protocolo TCP/IP",
+        "país": "EUA",
+        "texto": "A ARPANET migrou integralmente do antigo protocolo NCP para a pilha TCP/IP, criada por Vint Cerf e Robert Kahn. A padronização viabilizou a troca descentralizada de dados entre redes de formatos e fabricantes heterogêneos, sendo o marco fundador da arquitetura técnica da Internet.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "protocolo-tcp-ip-1983"
+    },
+    {
+        "id": 87,
+        "ano": "1983",
+        "resumo": "Criação do Sistema DNS",
+        "país": "EUA",
+        "texto": "Paul Mockapetris desenvolveu no Information Sciences Institute o Domain Name System (DNS). Substituindo o antigo arquivo estático HOSTS.TXT distribuído manualmente na ARPANET por um sistema distribuído e hierárquico, o DNS permitiu mapear endereços numéricos IP para nomes legíveis terminados em .com, .org ou domínios de países, viabilizando o crescimento global da Internet.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "sistema-dns-1983"
+    },
+    {
+        "id": 88,
+        "ano": "1983",
+        "resumo": "GPS Liberado para Civis",
+        "país": "EUA",
+        "texto": "O presidente dos Estados Unidos assinou uma diretiva determinando que o sistema de satélites de navegação militar NAVSTAR GPS fosse disponibilizado publicamente e sem cobrança para a aviação e uso civil mundial após o abate trágico do voo 007 da Korean Air Lines. A abertura permitiu a proliferação da navegação automotiva, mapeamento digital e geolocalização em smartphones.",
+        "categoria": "Leis e regras",
+        "ref": "gps-civis-1983"
+    },
+    {
+        "id": 89,
+        "ano": "1983",
+        "resumo": "Lançamento do Projeto GNU",
+        "país": "EUA",
+        "texto": "Richard Stallman anunciou publicamente a criação do Projeto GNU com o objetivo de desenvolver um sistema operacional completo totalmente livre e compatível com Unix. Em 1985, Stallman fundou a Free Software Foundation (FSF) e redigiu a licença GNU GPL, estabelecendo as quatro liberdades fundamentais do software livre e a base legal de cooperação comunitária de código aberto.",
+        "categoria": "Fato histórico",
+        "ref": "projeto-gnu-1983"
+    },
+    {
+        "id": 90,
+        "ano": "1984",
+        "resumo": "Lançamento do Macintosh",
+        "país": "EUA",
+        "texto": "A Apple apresentou o Macintosh 128K com ampla campanha televisiva. O equipamento popularizou comercialmente a interface gráfica com menus suspensos, janelas sobrepostas, ponteiro de mouse integrado e suporte nativo a tipografias proporcionais, transformando a usabilidade cotidiana do PC.",
+        "categoria": "Lançamento de produto",
+        "ref": "macintosh-1984"
+    },
+    {
+        "id": 91,
+        "ano": "1984",
+        "resumo": "Fundação da Cisco Systems",
+        "país": "EUA",
+        "texto": "Leonard Bosack e Sandy Lerner fundaram a Cisco Systems em San Jose, Califórnia, pioneira na fabricação de roteadores comerciais multiprotocolo de alto desempenho capazes de interligar redes locais com arquiteturas físicas e lógicas incompatíveis. O hardware desenvolvido pela empresa tornou-se a infraestrutura de comutação dominante do tráfego corporativo e de provedores de telecomunicações, pavimentando a expansão física e a escalabilidade global da Internet.",
+        "categoria": "Fundação de empresas",
+        "ref": "cisco-systems-1984"
+    },
+    {
+        "id": 92,
+        "ano": "1985",
+        "resumo": "Criação da Linguagem C++",
+        "país": "EUA",
+        "texto": "Bjarne Stroustrup publicou nos Laboratórios Bell o livro de referência e compilador de C++, uma extensão da linguagem C incorporando suporte a orientação a objetos, sobrecarga de operadores e templates genéricos com alto desempenho. A linguagem virou a espinha dorsal de motores de games 3D, navegadores web, sistemas operacionais modernos e softwares industriais de ponta.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-cpp-1985"
+    },
+    {
+        "id": 93,
+        "ano": "1985",
+        "resumo": "Primeiro Domínio .com",
+        "país": "EUA",
+        "texto": "O endereço 'symbolics.com' foi homologado e registrado pela fabricante de estações de trabalho de computação Symbolics Inc., tornando-se formalmente o primeiro domínio comercial registrado na história do sistema DNS. O evento marcou a transição inicial das redes computacionais de um ecossistema militar e acadêmico para o espaço do comércio e empreendedorismo privado.",
+        "categoria": "Fato histórico",
+        "ref": "primeiro-dominio-com-1985"
+    },
+    {
+        "id": 94,
+        "ano": "1985",
+        "resumo": "Processador ARM",
+        "país": "Reino Unido",
+        "texto": "Sophie Wilson e Steve Furber desenharam na Acorn Computers o processador ARM1, adotando a filosofia RISC de conjunto reduzido de instruções. Com foco pioneiro em alta eficiência por watt e baixo número de transistores, a arquitetura ARM tornou-se dominante no planeta, equipando atualmente mais de 95% dos smartphones, tablets, sensores inteligentes e computadores Apple Silicon.",
+        "categoria": "Robótica e Hardware",
+        "ref": "processador-arm-1985"
+    },
+    {
+        "id": 95,
+        "ano": "1986",
+        "resumo": "Algoritmo Backpropagation",
+        "país": "EUA",
+        "texto": "David Rumelhart, Geoffrey Hinton e Ronald Williams publicaram na revista Nature o artigo que demonstrou a eficácia do algoritmo de retropropagação do erro (backpropagation) no treinamento de redes neurais artificiais com múltiplas camadas ocultas. A técnica superou as limitações matemáticas de aprendizado lineares que haviam estagnado a área na década de 1970, tornando-se o pilar matemático indispensável para o renascimento e a maturidade do aprendizado profundo contemporâneo.",
+        "categoria": "Inteligência Artificial",
+        "ref": "algoritmo-backpropagation-1986"
+    },
+    {
+        "id": 96,
+        "ano": "1987",
+        "resumo": "Criação do Formato GIF",
+        "país": "EUA",
+        "texto": "O engenheiro de software Steve Wilhite e sua equipe na empresa de serviços online CompuServe lançaram o Graphics Interchange Format (GIF) para compactar imagens digitais de 8 bits usando o algoritmo LZW. Projetado para transferência ágil de imagens em conexões discadas lentas, o suporte a transparência e múltiplos quadros sequenciais transformou o formato em um ícone perene da comunicação visual, do humor e da cultura participativa da internet.",
+        "categoria": "Inventores e invenções",
+        "ref": "formato-gif-1987"
+    },
+    {
+        "id": 97,
+        "ano": "1988",
+        "resumo": "Disseminação do Morris Worm",
+        "país": "EUA",
+        "texto": "O estudante de graduação Robert Tappan Morris disparou na ARPANET o primeiro 'worm' de código autoreplicante da história da Internet, explorando falhas de buffer overflow no fingerd e configurações do sendmail em sistemas Unix BSD. Ao infectar repetidas vezes as mesmas máquinas e paralisar cerca de 10% de todos os computadores interconectados no mundo, o incidente resultou na criação da equipe emergencial CERT e marcou o nascimento oficial da cibersegurança como área crítica.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "morris-worm-1988"
+    },
+    {
+        "id": 98,
+        "ano": "1989",
+        "resumo": "Proposta da World Wide Web",
+        "país": "Suíça",
+        "texto": "O cientista britânico Tim Berners-Lee apresentou no CERN a proposta de um sistema descentralizado de organização de documentos por hipertexto conectado via Internet. O projeto especificou os protocolos HTTP, a formatação HTML e o padrão de endereços URL, dando origem à World Wide Web.",
+        "categoria": "Inventores e invenções",
+        "ref": "world-wide-web-1989"
+    },
+    {
+        "id": 99,
+        "ano": "1990",
+        "resumo": "Lançamento do Photoshop 1.0",
+        "país": "EUA",
+        "texto": "Os irmãos Thomas e John Knoll desenvolveram o editor gráfico Photoshop, lançado exclusivamente para computadores Apple Macintosh pela Adobe Systems. Com ferramentas inovadoras de processamento matricial, correção de curvas tonais e suporte modular a filtros digitais, o software revolucionou a indústria editorial, a fotografia e a arte digital, tornando-se a ferramenta de referência mundial para manipulação e composição de imagens bitmap.",
+        "categoria": "Lançamento de produto",
+        "ref": "photoshop-10-1990"
+    },
+    {
+        "id": 100,
+        "ano": "1991",
+        "resumo": "Lançamento do Linux",
+        "país": "Finlândia",
+        "texto": "Linus Torvalds divulgou em fóruns de discussão o código inicial de um núcleo compatível com Unix desenvolvido como projeto pessoal. Integrado às ferramentas do projeto GNU e sob licença de código aberto GPL, o Linux virou o alicerce dominante de servidores web, supercomputadores e do Android.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "linux-1991"
+    },
+    {
+        "id": 101,
+        "ano": "1991",
+        "resumo": "Lançamento do Python",
+        "país": "Holanda",
+        "texto": "Guido van Rossum lançou publicamente no instituto CWI a linguagem de programação Python na versão 0.9.0. Projetada com foco em sintaxe limpa, legibilidade de código por indentação obrigatória e multiparadigma, a linguagem tornou-se a ferramenta dominante no mundo para ciência de dados, aprendizado de máquina, IA moderna, desenvolvimento web e automação acadêmica.",
+        "categoria": "Inventores e invenções",
+        "ref": "python-1991"
+    },
+    {
+        "id": 102,
+        "ano": "1991",
+        "resumo": "Primeiro Website da Web",
+        "país": "Suíça",
+        "texto": "Tim Berners-Lee colocou no ar no centro de pesquisas do CERN o primeiro website da história da World Wide Web, hospedado no endereço 'info.cern.ch' em uma estação NeXT. A página explicava o funcionamento dos hipertextos, como navegar pelas páginas e como configurar servidores web, inaugurando a rede de documentos navegáveis da humanidade.",
+        "categoria": "Fato histórico",
+        "ref": "primeiro-website-1991"
+    },
+    {
+        "id": 103,
+        "ano": "1991",
+        "resumo": "Criação do PGP e Crypto Wars",
+        "país": "EUA",
+        "texto": "Phil Zimmermann lançou gratuitamente o Pretty Good Privacy (PGP), o primeiro software a empacotar criptografia de chave pública assimétrica (RSA) e algoritmos simétricos em um pacote acessível e inviolável para usuários comuns protegerem e-mails e arquivos. A distribuição livre gerou um inquérito federal contra Zimmermann pelo governo norte-americano sob a acusação de exportação ilegal de armas, deflagrando as chamadas 'Crypto Wars' pela legitimidade da privacidade digital do cidadão.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "pgp-crypto-wars-1991"
+    },
+    {
+        "id": 104,
+        "ano": "1992",
+        "resumo": "Envio do Primeiro SMS",
+        "país": "Reino Unido",
+        "texto": "O engenheiro Neil Papworth enviou a primeira mensagem de texto comercial de SMS através da rede celular GSM da Vodafone na Inglaterra, digitando a frase 'Merry Christmas' de um computador para o telefone móvel de Richard Jarvis. A tecnologia de mensagens curtas desencadeou a cultura global de comunicação textual instantânea em dispositivos móveis.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "primeiro-sms-1992"
+    },
+    {
+        "id": 105,
+        "ano": "1993",
+        "resumo": "Navegador Mosaic Lançado",
+        "país": "EUA",
+        "texto": "Marc Andreessen e Eric Bina lançaram o NCSA Mosaic, primeiro navegador web amplamente acessível capaz de exibir imagens em linha com o texto na mesma janela de visualização. O programa detonou o interesse do público leigo pela navegação e abriu caminho para a fundação da Netscape.",
+        "categoria": "Lançamento de produto",
+        "ref": "navegador-mosaic-1993"
+    },
+    {
+        "id": 106,
+        "ano": "1993",
+        "resumo": "Fundação da NVIDIA",
+        "país": "EUA",
+        "texto": "Jensen Huang, Chris Malachowsky e Curtis Priem fundaram a NVIDIA com o objetivo de produzir chips aceleradores de processamento visual e computação gráfica 3D. A companhia inventou o conceito moderno de GPU em 1999 e mais tarde reorientou sua arquitetura paralela para inteligência artificial profunda, tornando-se uma das empresas mais valiosas do mercado financeiro mundial.",
+        "categoria": "Fundação de empresas",
+        "ref": "nvidia-1993"
+    },
+    {
+        "id": 107,
+        "ano": "1993",
+        "resumo": "Criação do Formato PDF",
+        "país": "EUA",
+        "texto": "A Adobe Systems, liderada por John Warnock e seu projeto Camelot, lançou o Portable Document Format (PDF) e os leitores Acrobat Reader. Projetado para preservar fielmente a diagramação, tipografia e elementos vetoriais independentemente do sistema operacional, hardware ou dispositivo de impressão utilizado, o formato converteu-se no padrão universal da indústria global para intercâmbio, arquivo e assinatura digital de documentos eletrônicos.",
+        "categoria": "Lançamento de produto",
+        "ref": "formato-pdf-1993"
+    },
+    {
+        "id": 108,
+        "ano": "1993",
+        "resumo": "Padronização do Áudio MP3",
+        "país": "Alemanha",
+        "texto": "O Instituto Fraunhofer IIS na Alemanha, sob a liderança dos pesquisadores Karlheinz Brandenburg e Bernhard Grill, concluiu junto à ISO a padronização do algoritmo de compressão MPEG-1 Audio Layer III (MP3). Fundamentado em princípios de psicoacústica para descartar frequências imperceptíveis pela audição humana sem perda subjetiva evidente de qualidade, o formato reduziu o peso das gravações sonoras em até 90%, provocando uma disrupção definitiva na indústria da música.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "audio-mp3-1993"
+    },
+    {
+        "id": 109,
+        "ano": "1994",
+        "resumo": "Fundação da Amazon",
+        "país": "EUA",
+        "texto": "Jeff Bezos fundou a Amazon em Seattle originalmente como uma livraria virtual em sua garagem. A companhia pioneirizou sistemas de recomendação automatizados, logística de entrega de alta precisão em e-commerce e, posteriormente, inventou a infraestrutura moderna de computação em nuvem em hiperescala através da divisão Amazon Web Services (AWS).",
+        "categoria": "Fundação de empresas",
+        "ref": "amazon-1994"
+    },
+    {
+        "id": 110,
+        "ano": "1994",
+        "resumo": "Algoritmo Quântico de Shor",
+        "país": "EUA",
+        "texto": "Peter Shor formulou nos Laboratórios Bell um algoritmo quântico capaz de encontrar os fatores primos de números inteiros em tempo polinomial. O resultado provou teoricamente que um computador quântico suficientemente potente poderia quebrar os esquemas de criptografia de chave pública clássicos mais difundidos no mundo (como o RSA), impulsionando a criptografia pós-quântica.",
+        "categoria": "Computação Quântica",
+        "ref": "algoritmo-shor-1994"
+    },
+    {
+        "id": 111,
+        "ano": "1994",
+        "resumo": "Fundação do Consórcio W3C",
+        "país": "EUA",
+        "texto": "Tim Berners-Lee fundou o World Wide Web Consortium (W3C) nas instalações do MIT com apoio do CERN e da agência DARPA, com a missão de liderar o desenvolvimento da Web ao seu potencial pleno através de padrões abertos comuns. Ao estabelecer especificações técnicas livres de royalties para HTML, URLs e protocolos semânticos subsequentes, a entidade evitou a fragmentação corporativa da Web e assegurou sua interoperabilidade global e democratização perpétua.",
+        "categoria": "Fundação de empresas",
+        "ref": "w3c-1994"
+    },
+    {
+        "id": 112,
+        "ano": "1995",
+        "resumo": "Lançamento do Windows 95",
+        "país": "EUA",
+        "texto": "A Microsoft lançou o Windows 95, introduzindo elementos visuais como o botão Iniciar, a barra de tarefas e gerenciamento Plug and Play com arquitetura de 32 bits. O produto impulsionou a informatização em massa e preparou a transição da população mundial para o acesso cotidiano à Internet.",
+        "categoria": "Lançamento de produto",
+        "ref": "windows-95-1995"
+    },
+    {
+        "id": 113,
+        "ano": "1995",
+        "resumo": "Lançamento da Linguagem Java",
+        "país": "EUA",
+        "texto": "James Gosling e a Sun Microsystems lançaram a plataforma Java sob o lema 'Write Once, Run Anywhere' (Escreva uma vez, execute em qualquer lugar). Utilizando compilação para bytecode intermediário executado dentro de uma Máquina Virtual Java (JVM), a tecnologia estabeleceu o padrão de interoperabilidade em sistemas corporativos de missão crítica e no ecossistema Android.",
+        "categoria": "Lançamento de produto",
+        "ref": "linguagem-java-1995"
+    },
+    {
+        "id": 114,
+        "ano": "1995",
+        "resumo": "Criação do JavaScript",
+        "país": "EUA",
+        "texto": "Brendan Eich criou a linguagem JavaScript em apenas dez dias na Netscape Communications para permitir scripts e comportamentos dinâmicos dentro das páginas do navegador Netscape Navigator. Padronizada como ECMAScript, tornou-se a linguagem onipresente de toda a World Wide Web, sustentando aplicações web interativas tanto no front-end quanto no back-end (Node.js).",
+        "categoria": "Inventores e invenções",
+        "ref": "javascript-1995"
+    },
+    {
+        "id": 115,
+        "ano": "1995",
+        "resumo": "Criação do Protocolo SSL",
+        "país": "EUA",
+        "texto": "A Netscape Communications introduziu o protocolo SSL 2.0 (Secure Sockets Layer) para cifrar as comunicações na Web entre navegadores e servidores remotos. Ao viabilizar canais criptografados para transporte de senhas e cartões de crédito sobre HTTP (gerando o protocolo HTTPS), a ferramenta permitiu a explosão segura do comércio eletrônico e do internet banking mundial.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "protocolo-ssl-1995"
+    },
+    {
+        "id": 116,
+        "ano": "1995",
+        "resumo": "Criação da Linguagem PHP",
+        "país": "Dinamarca",
+        "texto": "Rasmus Lerdorf liberou a primeira versão do Personal Home Page Tools (PHP), um conjunto de binários em C concebido para rastrear visitantes e processar formulários dinâmicos em páginas web pessoais. Evoluindo rapidamente para uma linguagem completa de script executada do lado do servidor (server-side) embutida em HTML, o PHP democratizou a criação de páginas web dinâmicas e passou a alimentar a imensa maioria dos sistemas de gerenciamento de conteúdo da internet.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-php-1995"
+    },
+    {
+        "id": 117,
+        "ano": "1996",
+        "resumo": "Barramento USB",
+        "país": "EUA",
+        "texto": "Um consórcio de tecnologia liderado pela Intel e pelo engenheiro Ajay Bhatt lançou a especificação USB 1.0 (Universal Serial Bus). O barramento substituiu dezenas de portas incompatíveis de impressoras, teclados, joysticks e mouses por uma interface unificada 'Plug and Play' com alimentação elétrica, estabelecendo o padrão universal de conectividade periférica do mundo.",
+        "categoria": "Robótica e Hardware",
+        "ref": "barramento-usb-1996"
+    },
+    {
+        "id": 118,
+        "ano": "1996",
+        "resumo": "Padronização do Padrão CSS",
+        "país": "França",
+        "texto": "O W3C aprovou e publicou a especificação do Cascading Style Sheets (CSS Nível 1), concebida pelo cientista de computação norueguês Håkon Wium Lie em cooperação com Bert Bos. A introdução das folhas de estilo possibilitou a separação estrita entre a estrutura de dados semânticos em HTML e sua camada de apresentação visual, inaugurando o design responsivo, a consistência estética em escala e a eficiência de banda na evolução da World Wide Web.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "padrao-css-1996"
+    },
+    {
+        "id": 119,
+        "ano": "1997",
+        "resumo": "Deep Blue Vence Kasparov",
+        "país": "EUA",
+        "texto": "O supercomputador Deep Blue da IBM derrotou o campeão mundial Garry Kasparov em um match oficial de xadrez com controle tradicional de tempo. A vitória provou o poder de algoritmos de busca paralela com aceleradores de hardware dedicados contra o raciocínio estratégico humano.",
+        "categoria": "Inteligência Artificial",
+        "ref": "deep-blue-kasparov-1997"
+    },
+    {
+        "id": 120,
+        "ano": "1997",
+        "resumo": "Padronização do Wi-Fi",
+        "país": "EUA",
+        "texto": "O comitê internacional IEEE homologou o padrão 802.11 original para redes locais sem fio, complementado por pesquisas pioneiras da agência científica australiana CSIRO em modulação de rádio multipercurso. A marca registrada 'Wi-Fi' libertou os computadores dos fios de rede fixos, tornando a conexão à Internet móvel, onipresente em residências, aeroportos e cafeterias.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "padronizacao-wifi-1997"
+    },
+    {
+        "id": 121,
+        "ano": "1998",
+        "resumo": "Fundação do Google",
+        "país": "EUA",
+        "texto": "Larry Page e Sergey Brin fundaram o Google a partir de pesquisas na Universidade de Stanford, criando o algoritmo PageRank para indexar e classificar a relevância de páginas de acordo com a quantidade de hiperlinks recebidos. O buscador transformou radicalmente o acesso à informação global.",
+        "categoria": "Fundação de empresas",
+        "ref": "google-1998"
+    },
+    {
+        "id": 122,
+        "ano": "1998",
+        "resumo": "Lançamento do Bluetooth",
+        "país": "Suécia",
+        "texto": "As empresas Ericsson, Intel, Nokia, IBM e Toshiba formaram o Bluetooth Special Interest Group (SIG) para regulamentar uma norma de comunicação sem fio de curto alcance por ondas de rádio UHF. O padrão substituiu cabos em periféricos de computador, caixas de som e fones de ouvido sem fio, viabilizando redes pessoais portáteis sem dependência de cabos.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "bluetooth-1998"
+    },
+    {
+        "id": 123,
+        "ano": "1998",
+        "resumo": "Movimento Open Source",
+        "país": "EUA",
+        "texto": "Bruce Perens e Eric S. Raymond fundaram a Open Source Initiative (OSI) após a Netscape anunciar a abertura do código de seu navegador. O grupo cunhou formalmente a definição de 'Open Source' e critérios de licenças, posicionando o modelo de software compartilhado não apenas como um direito ético, mas como metodologia pragmática superior para o avanço da engenharia comercial.",
+        "categoria": "Fato histórico",
+        "ref": "movimento-open-source-1998"
+    },
+    {
+        "id": 124,
+        "ano": "1999",
+        "resumo": "Lançamento da GeForce 256",
+        "país": "EUA",
+        "texto": "A NVIDIA comercializou o chip GeForce 256, cunhando oficialmente o conceito de Unidade de Processamento Gráfico (GPU). O hardware integrava em silício motores de transformação geométrica e iluminação 3D (T&L), aliviando a CPU principal de rotinas de renderização e inaugurando uma arquitetura de paralelismo massivo que viria a acelerar os algoritmos de Deep Learning.",
+        "categoria": "Lançamento de produto",
+        "ref": "geforce-256-1999"
+    },
+    {
+        "id": 125,
+        "ano": "1999",
+        "resumo": "Lançamento do Napster (P2P)",
+        "país": "EUA",
+        "texto": "Shawn Fanning e Sean Parker lançaram o Napster, pioneira aplicação de compartilhamento descentralizado de arquivos musicais em formato MP3 entre usuários conectados em rede P2P (Peer-to-Peer). O software transformou radicalmente os modelos de negócio da indústria fonográfica e impulsionou o desenvolvimento de protocolos descentralizados e serviços de streaming online.",
+        "categoria": "Lançamento de produto",
+        "ref": "napster-p2p-1999"
+    },
+    {
+        "id": 126,
+        "ano": "2000",
+        "resumo": "Passagem do Bug do Milênio",
+        "país": "EUA",
+        "texto": "Na transição da meia-noite para 1º de janeiro de 2000, o ecossistema tecnológico mundial atravessou sem interrupções críticas o Bug do Milênio (Y2K), vulnerabilidade derivada de décadas de programas que armazenavam anos com apenas dois dígitos numéricos ('99' para 1999). O evento exigiu a maior força-tarefa coordenada de auditoria e reprogramação de software legado da história humana, investindo centenas de bilhões de dólares e evidenciando a dependência civilizatória de códigos invisíveis.",
+        "categoria": "Fato histórico",
+        "ref": "bug-do-milenio-2000"
+    },
+    {
+        "id": 127,
+        "ano": "2001",
+        "resumo": "Criação da Wikipédia",
+        "país": "EUA",
+        "texto": "Jimmy Wales e Larry Sanger lançaram a Wikipédia, enciclopédia online multilíngue baseada em edição aberta por voluntários e licença livre. Superando os modelos fechados mantidos por enciclopédias impressas, a plataforma formou a maior compilação comunitária de conhecimento humano da história.",
+        "categoria": "Fato histórico",
+        "ref": "wikipedia-2001"
+    },
+    {
+        "id": 128,
+        "ano": "2001",
+        "resumo": "Lançamento do Mac OS X",
+        "país": "EUA",
+        "texto": "A Apple lançou comercialmente o Mac OS X 10.0 (Cheetah), substituindo a clássica arquitetura herdada da década de 1980 por uma base Unix sólida construída sobre o microkernel Mach e tecnologias desenvolvidas na NeXT. O sistema introduziu a interface gráfica Aqua e serviu como matriz técnica direta para os sistemas operacionais iOS, iPadOS, watchOS e macOS modernos.",
+        "categoria": "Lançamento de produto",
+        "ref": "mac-os-x-2001"
+    },
+    {
+        "id": 129,
+        "ano": "2001",
+        "resumo": "Publicação do Manifesto Ágil",
+        "país": "EUA",
+        "texto": "Dezessete influentes engenheiros e consultores de software reuniram-se em Utah e redigiram o Manifesto para o Desenvolvimento Ágil de Software, sintetizando os valores comuns de métodos iterativos emergentes como Scrum, eXtreme Programming (XP) e Crystal. Ao preconizar a colaboração contínua com o cliente, entregas frequentes em ciclos curtos e adaptação ágil a mudanças em detrimento de planos rígidos e documentação pesada, o manifesto remodelou em escala global a cultura de projetos de tecnologia.",
+        "categoria": "Fato histórico",
+        "ref": "manifesto-agil-2001"
+    },
+    {
+        "id": 130,
+        "ano": "2001",
+        "resumo": "Lançamento do Protocolo BitTorrent",
+        "país": "EUA",
+        "texto": "O engenheiro de software Bram Cohen apresentou o BitTorrent, um protocolo de rede peer-to-peer (P2P) projetado para distribuição hiper-eficiente de arquivos de grande porte entre computadores interconectados. Ao fragmentar os arquivos e exigir que cada cliente fizesse o upload simultâneo das peças já baixadas para outros nós da rede ('enxame'), a tecnologia eliminou o gargalo de largura de banda de servidores centrais e dominou uma fração expressiva de todo o tráfego de dados da Internet na década de 2000.",
+        "categoria": "Telecomunicações e Redes",
+        "ref": "protocolo-bittorrent-2001"
+    },
+    {
+        "id": 131,
+        "ano": "2004",
+        "resumo": "Fundação do Facebook",
+        "país": "EUA",
+        "texto": "Mark Zuckerberg fundou o Thefacebook em dormitórios de Harvard para conectar estudantes universitários. A rede social expandiu-se globalmente, padronizou o modelo de feeds com algoritmos de recomendação comportamental e reconfigurou a comunicação social e os modelos de publicidade digital.",
+        "categoria": "Fundação de empresas",
+        "ref": "facebook-2004"
+    },
+    {
+        "id": 132,
+        "ano": "2004",
+        "resumo": "Lançamento do Mozilla Firefox",
+        "país": "EUA",
+        "texto": "A Fundação Mozilla lançou a primeira versão estável do navegador de código aberto Firefox 1.0. Trazendo abas de navegação nativas, bloqueador integrado de pop-ups, suporte a extensões de terceiros e forte conformidade com padrões abertos da Web, o Firefox quebrou o monopólio quase absoluto do Internet Explorer da Microsoft e restaurou a competição no mercado de browsers.",
+        "categoria": "Lançamento de produto",
+        "ref": "mozilla-firefox-2004"
+    },
+    {
+        "id": 133,
+        "ano": "2005",
+        "resumo": "Criação do Sistema Git",
+        "país": "EUA",
+        "texto": "Linus Torvalds desenvolveu e disponibilizou o Git, um sistema de controle de versão distribuído de alta velocidade criado para gerenciar o imenso código colaborativo do kernel Linux. O Git dispensou servidores centrais obrigatórios, tornou operações de ramificação e mesclagem instantâneas e converteu-se no padrão universal absoluto de gestão de código da engenharia de software.",
+        "categoria": "Inventores e invenções",
+        "ref": "sistema-git-2005"
+    },
+    {
+        "id": 134,
+        "ano": "2005",
+        "resumo": "Lançamento do YouTube",
+        "país": "EUA",
+        "texto": "Chad Hurley, Steve Chen e Jawed Karim criaram o YouTube, permitindo que qualquer pessoa com conexão à Internet carregasse, compartilhasse e assistisse a vídeos digitais diretamente no navegador sem plugins complexos. Adquirida pelo Google em 2006, a plataforma revolucionou a produção de conteúdo em vídeo, a cultura da internet e os sistemas globais de streaming.",
+        "categoria": "Fundação de empresas",
+        "ref": "youtube-2005"
+    },
+    {
+        "id": 135,
+        "ano": "2006",
+        "resumo": "Nascimento da Nuvem AWS",
+        "país": "EUA",
+        "texto": "A Amazon disponibilizou publicamente os serviços computacionais do AWS com servidores elásticos (EC2) e armazenamento em larga escala (S3). Cobrado sob demanda, o paradigma de computação em nuvem permitiu o florescimento acelerado de empresas e startups sem data centers proprietários.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "nuvem-aws-2006"
+    },
+    {
+        "id": 136,
+        "ano": "2006",
+        "resumo": "Lançamento da Arquitetura CUDA",
+        "país": "EUA",
+        "texto": "A NVIDIA apresentou a arquitetura CUDA (Compute Unified Device Architecture), provendo aos desenvolvedores compiladores e ferramentas para programar suas placas de processamento gráfico (GPUs) em linguagens padrão como C e C++. Essa democratização da computação paralela de uso geral em GPUs (GPGPU) transferiu cálculos matriciais intensivos da CPU para milhares de núcleos paralelos, viabilizando o poder computacional essencial que mais tarde deflagraria o treinamento de grandes redes neurais profundas.",
+        "categoria": "Robótica e Hardware",
+        "ref": "arquitetura-cuda-2006"
+    },
+    {
+        "id": 137,
+        "ano": "2007",
+        "resumo": "Lançamento do iPhone",
+        "país": "EUA",
+        "texto": "Steve Jobs revelou o iPhone original, combinando reprodutor multimídia, telefone celular e comunicador de internet em um display capacitivo sensível ao toque com interface gestual. Acompanhado pela App Store em 2008, o aparelho inaugurou a era moderna da computação móvel ubíqua.",
+        "categoria": "Lançamento de produto",
+        "ref": "iphone-2007"
+    },
+    {
+        "id": 138,
+        "ano": "2008",
+        "resumo": "Whitepaper do Bitcoin",
+        "país": "Japão",
+        "texto": "Sob o pseudônimo Satoshi Nakamoto, foi publicado o documento descritivo do Bitcoin, propondo um sistema de dinheiro eletrônico entre pares. O projeto uniu redes descentralizadas, criptografia e consenso por Proof of Work, criando a tecnologia blockchain e o setor de ativos digitais.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "bitcoin-whitepaper-2008"
+    },
+    {
+        "id": 139,
+        "ano": "2008",
+        "resumo": "Lançamento do Android",
+        "país": "EUA",
+        "texto": "O Google e a Open Handset Alliance lançaram o sistema operacional Android junto com o aparelho HTC Dream. Distribuído sob licença livre e código aberto, o ecossistema permitiu a massificação de smartphones acessíveis e tornou-se a plataforma operacional móvel dominante do planeta.",
+        "categoria": "Lançamento de produto",
+        "ref": "android-2008"
+    },
+    {
+        "id": 140,
+        "ano": "2008",
+        "resumo": "Lançamento do Google Chrome",
+        "país": "EUA",
+        "texto": "O Google lançou o navegador de código aberto Chrome, introduzindo uma arquitetura multiprocesso onde cada aba operava isolada em uma caixa de areia independente e o pioneiro motor JavaScript V8 com compilação JIT ultrarrápida. A inovação elevou a velocidade da Web moderna e tornou o Chrome o navegador amplamente dominante do mercado global.",
+        "categoria": "Lançamento de produto",
+        "ref": "google-chrome-2008"
+    },
+    {
+        "id": 141,
+        "ano": "2008",
+        "resumo": "Fundação do GitHub",
+        "país": "EUA",
+        "texto": "Tom Preston-Werner, Chris Wanstrath, PJ Hyett e Scott Chacon lançaram a plataforma GitHub, combinando o controle de versão Git com uma interface web colaborativa focada em 'pull requests' e rede social para desenvolvedores. O site virou o maior repositório de projetos e bibliotecas de código aberto do planeta, sendo adquirido pela Microsoft em 2018.",
+        "categoria": "Fundação de empresas",
+        "ref": "github-2008"
+    },
+    {
+        "id": 142,
+        "ano": "2009",
+        "resumo": "Lançamento do Ambiente Node.js",
+        "país": "EUA",
+        "texto": "Ryan Dahl lançou o ambiente de execução Node.js na JSConf EU, extraindo o motor JavaScript V8 do Google Chrome para rodar nativamente em servidores com um modelo de entrada e saída (I/O) não-bloqueante orientado a eventos assíncronos. A inovação permitiu que engenheiros utilizassem uma mesma linguagem em todas as camadas de uma aplicação e lidassem com dezenas de milhares de conexões concorrentes simultâneas em tempo real, catalisando uma revolução no desenvolvimento web e microsserviços.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "nodejs-2009"
+    },
+    {
+        "id": 143,
+        "ano": "2010",
+        "resumo": "Ataque do Malware Stuxnet",
+        "país": "EUA",
+        "texto": "Especialistas de segurança cibernética isolaram e analisaram o vírus Stuxnet, a primeira arma cibernética militarizada de precisão cirúrgica comprovada da história, especificamente programada para alterar a frequência de rotação e provocar a destruição física de centrífugas de enriquecimento de urânio na usina iraniana de Natanz. Ao manipular silenciosamente controladores lógicos programáveis (PLCs) industriais da Siemens enquanto exibia telemetria falsa, o código inaugurou a era da guerra cibernética cinética.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "malware-stuxnet-2010"
+    },
+    {
+        "id": 144,
+        "ano": "2011",
+        "resumo": "Watson Vence Jeopardy!",
+        "país": "EUA",
+        "texto": "O supercomputador Watson da IBM competiu no programa de perguntas e respostas da televisão norte-americana Jeopardy! e derrotou os dois maiores campeões históricos da competição, Brad Rutter e Ken Jennings. O feito demonstrou a capacidade de sistemas de computação em analisar linguagem natural humana, trocadilhos complexos e grandes bases textuais em tempo real.",
+        "categoria": "Inteligência Artificial",
+        "ref": "watson-jeopardy-2011"
+    },
+    {
+        "id": 145,
+        "ano": "2011",
+        "resumo": "Assistente Siri Lançada",
+        "país": "EUA",
+        "texto": "A Apple integrou a assistente virtual Siri no smartphone iPhone 4S, utilizando reconhecimento de fala por processamento de linguagem natural e conexão a servidores na nuvem para responder perguntas e executar comandos. O lançamento popularizou em massa as interfaces conversacionais controladas por voz em dispositivos móveis cotidianos.",
+        "categoria": "Lançamento de produto",
+        "ref": "assistente-siri-2011"
+    },
+    {
+        "id": 146,
+        "ano": "2012",
+        "resumo": "Revolução da AlexNet",
+        "país": "Canadá",
+        "texto": "Alex Krizhevsky, Ilya Sutskever e Geoffrey Hinton venceram a competição ImageNet utilizando a rede neural convolucional profunda AlexNet acelerada por GPUs. A redução dramática de taxas de erro comprovou a eficácia do Deep Learning e iniciou a revolução moderna de inteligência artificial.",
+        "categoria": "Inteligência Artificial",
+        "ref": "alexnet-2012"
+    },
+    {
+        "id": 147,
+        "ano": "2012",
+        "resumo": "Lançamento do Raspberry Pi",
+        "país": "Reino Unido",
+        "texto": "Eben Upton e a Raspberry Pi Foundation colocaram no mercado o computador de placa única Raspberry Pi modelo B pelo valor de 35 dólares. Desenvolvido para estimular o ensino acessível de ciência da computação e robótica em escolas, o equipamento vendeu dezenas de milhões de unidades e consolidou a cultura maker e projetos de Internet das Coisas (IoT).",
+        "categoria": "Lançamento de produto",
+        "ref": "raspberry-pi-2012"
+    },
+    {
+        "id": 148,
+        "ano": "2013",
+        "resumo": "Lançamento do Docker",
+        "país": "EUA",
+        "texto": "Solomon Hykes apresentou o projeto de código aberto Docker na conferência PyCon. Utilizando isolamento em nível de sistema operacional (namespaces e cgroups do Linux), o Docker padronizou a conteinerização de software, permitindo empacotar aplicações com todas as suas dependências em imagens leves e portáveis, revolucionando a cultura DevOps e as arquiteturas de microsserviços.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "docker-2013"
+    },
+    {
+        "id": 149,
+        "ano": "2014",
+        "resumo": "Lançamento do Kubernetes",
+        "país": "EUA",
+        "texto": "O Google lançou o projeto de código aberto Kubernetes (K8s), baseado em mais de uma década de experiência interna com seu sistema Borg. Projetado para automatizar a implantação, escalonamento e gerenciamento de aplicações em contêineres em clusters de servidores em nuvem, o Kubernetes transformou-se no sistema operacional padrão da computação em nuvem nativa.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "kubernetes-2014"
+    },
+    {
+        "id": 150,
+        "ano": "2014",
+        "resumo": "Redes Generativas (GANs)",
+        "país": "Canadá",
+        "texto": "Ian Goodfellow e pesquisadores da Universidade de Montreal publicaram a arquitetura das Redes Generativas Adversárias (GANs). Colocando duas redes neurais profundas para competir mutuamente (um gerador e um discriminador), a técnica revolucionou a síntese realista de imagens, restauração gráfica e geração de mídia visual sintética por inteligência artificial.",
+        "categoria": "Inteligência Artificial",
+        "ref": "gans-redes-generativas-2014"
+    },
+    {
+        "id": 151,
+        "ano": "2015",
+        "resumo": "Fundação da OpenAI",
+        "país": "EUA",
+        "texto": "Sam Altman, Elon Musk, Ilya Sutskever e Greg Brockman fundaram a OpenAI como instituição sem fins lucrativos focada em desenvolver inteligência artificial geral segura e benéfica para a humanidade, atraindo talentos mundiais em aprendizado por reforço e modelos fundacionais.",
+        "categoria": "Fundação de empresas",
+        "ref": "openai-2015"
+    },
+    {
+        "id": 152,
+        "ano": "2015",
+        "resumo": "Lançamento da Rede Ethereum",
+        "país": "Suíça",
+        "texto": "Vitalik Buterin, Gavin Wood e colaboradores colocaram em operação a rede pública Ethereum. Expandindo a ideia de dinheiro digital descentralizado do Bitcoin, a Ethereum implementou uma máquina virtual completa (EVM) que permite programar e executar contratos inteligentes autoexecutáveis sem intermediários, viabilizando o ecossistema de finanças descentralizadas (DeFi).",
+        "categoria": "Tecnologia surgindo",
+        "ref": "rede-ethereum-2015"
+    },
+    {
+        "id": 153,
+        "ano": "2015",
+        "resumo": "Lançamento da Linguagem Rust 1.0",
+        "país": "EUA",
+        "texto": "A Fundação Mozilla lançou a versão estável 1.0 do Rust, uma linguagem de programação de sistemas projetada com o objetivo central de oferecer máxima velocidade e simultaneidade combinadas com segurança de memória garantida em tempo de compilação. Seu rigoroso sistema de gerenciamento de posse ('ownership') e verificação de referências ('borrow checker') erradicou falhas críticas de corrupção de memória e vazamentos sem a sobrecarga de um coletor de lixo, ganhando adoção nos núcleos do Linux, Android e Windows.",
+        "categoria": "Inventores e invenções",
+        "ref": "linguagem-rust-2015"
+    },
+    {
+        "id": 154,
+        "ano": "2016",
+        "resumo": "AlphaGo Vence Lee Sedol",
+        "país": "Coreia do Sul",
+        "texto": "O programa AlphaGo da DeepMind derrotou o campeão mundial sul-coreano Lee Sedol no tradicional jogo de tabuleiro Go por 4 partidas a 1. Devido à imensa complexidade combinatória do jogo, o feito provou o poder de redes neurais profundas integradas a busca em árvore de Monte Carlo.",
+        "categoria": "Inteligência Artificial",
+        "ref": "alphago-lee-sedol-2016"
+    },
+    {
+        "id": 155,
+        "ano": "2017",
+        "resumo": "Artigo dos Transformers",
+        "país": "EUA",
+        "texto": "Cientistas do Google Brain publicaram o artigo 'Attention Is All You Need', apresentando o mecanismo de Transformer. Dispensando conexões recorrentes em favor de mecanismos de atenção paralelizáveis, a arquitetura serviu de motor essencial para todos os grandes modelos de linguagem contemporâneos.",
+        "categoria": "Inteligência Artificial",
+        "ref": "transformers-attention-2017"
+    },
+    {
+        "id": 156,
+        "ano": "2018",
+        "resumo": "Vigência do GDPR",
+        "país": "União Europeia",
+        "texto": "Entrou em aplicação obrigatória o Regulamento Geral sobre a Proteção de Dados (GDPR) na União Europeia, estabelecendo diretrizes rígidas sobre consentimento, retenção e privacidade de dados de internautas. O marco gerou um padrão regulatório internacional, inspirando a LGPD no Brasil.",
+        "categoria": "Leis e regras",
+        "ref": "gdpr-2018"
+    },
+    {
+        "id": 157,
+        "ano": "2019",
+        "resumo": "Supremacia Quântica da Google",
+        "país": "EUA",
+        "texto": "Pesquisadores da Google anunciaram na revista Nature que o processador quântico Sycamore, contendo 53 qubits supercondutores programáveis, executou uma tarefa de amostragem estatística em 200 segundos que levaria cerca de 10 mil anos no supercomputador clássico Summit da IBM. O experimento foi amplamente aclamado como a primeira demonstração prática da supremacia quântica.",
+        "categoria": "Computação Quântica",
+        "ref": "supremacia-quantica-google-2019"
+    },
+    {
+        "id": 158,
+        "ano": "2020",
+        "resumo": "Descoberta do AlphaFold 2",
+        "país": "Reino Unido",
+        "texto": "A equipe da DeepMind apresentou o sistema de inteligência artificial AlphaFold 2 na avaliação CASP14, demonstrando precisão atômica na predição tridimensional da estrutura espacial de proteínas a partir de sequências de aminoácidos. A quebra de um desafio de 50 anos da biologia molecular acelerou o desenvolvimento mundial de novos medicamentos e terapias biomédicas.",
+        "categoria": "Inteligência Artificial",
+        "ref": "alphafold-2-2020"
+    },
+    {
+        "id": 159,
+        "ano": "2020",
+        "resumo": "Waymo Inicia Robotáxis",
+        "país": "EUA",
+        "texto": "A Waymo, divisão de condução autônoma da Alphabet, abriu ao público em geral na cidade de Phoenix, Arizona, o primeiro serviço comercial regular de táxi totalmente sem motorista humano na cabine (nível 4 de autonomia). Equipados com LiDAR, radares e modelos de visão computacional, os veículos comprovaram a segurança da condução autônoma nas vias públicas urbanas.",
+        "categoria": "Robótica e Hardware",
+        "ref": "waymo-robotaxis-2020"
+    },
+    {
+        "id": 160,
+        "ano": "2020",
+        "resumo": "Lançamento do Apple M1",
+        "país": "EUA",
+        "texto": "A Apple lançou o processador Apple M1 para computadores Mac, concluindo a transição histórica da arquitetura x86 da Intel para ARM personalizado em desktops e laptops de alto desempenho. Integrando CPU, GPU, Neural Engine e memória unificada em um único chip de alta eficiência energética, o silício redefiniu os benchmarks de desempenho por watt da indústria de computadores.",
+        "categoria": "Lançamento de produto",
+        "ref": "apple-m1-2020"
+    },
+    {
+        "id": 161,
+        "ano": "2021",
+        "resumo": "Lançamento do GitHub Copilot",
+        "país": "EUA",
+        "texto": "O GitHub e a OpenAI lançaram a ferramenta de auxílio a programadores GitHub Copilot, baseada no modelo de rede neural Codex derivado do GPT-3. Capaz de autocompletar funções de código inteiras a partir de comentários de texto digitados pelo usuário no editor, o produto iniciou a transformação do desenvolvimento de software assistido diretamente por modelos generativos.",
+        "categoria": "Lançamento de produto",
+        "ref": "github-copilot-2021"
+    },
+    {
+        "id": 162,
+        "ano": "2021",
+        "resumo": "Voo do Helicóptero Ingenuity em Marte",
+        "país": "EUA",
+        "texto": "O helicóptero robótico Ingenuity da NASA realizou o primeiro voo motorizado, controlado e estável em outro planeta, sobrevoando a atmosfera ultrafina de Marte com comandos gerados por algoritmos autônomos locais. Alimentado por um processador comercial Qualcomm Snapdragon rodando sobre o sistema operacional Linux com bibliotecas de visão computacional em tempo real, a missão demonstrou que robótica autônoma com hardware de consumo e software de código aberto é plenamente viável na exploração planetária.",
+        "categoria": "Robótica e Hardware",
+        "ref": "helicoptero-ingenuity-marte-2021"
+    },
+    {
+        "id": 163,
+        "ano": "2022",
+        "resumo": "Lançamento do ChatGPT",
+        "país": "EUA",
+        "texto": "A OpenAI abriu o ChatGPT para uso público com base no modelo GPT-3.5 aprimorado por aprendizado por reforço com feedback humano (RLHF). O sistema bateu marcas históricas ao atingir 100 milhões de usuários em poucos meses, inaugurando o uso cotidiano generalizado de IA generativa.",
+        "categoria": "Lançamento de produto",
+        "ref": "chatgpt-2022"
+    },
+    {
+        "id": 164,
+        "ano": "2022",
+        "resumo": "Frontier Quebra a Barreira do Exaflop",
+        "país": "EUA",
+        "texto": "O supercomputador Frontier, instalado no Laboratório Nacional de Oak Ridge (ORNL) do Departamento de Energia dos EUA e construído pela HPE com processadores e aceleradores AMD Instinct, tornou-se o primeiro computador da história a quebrar oficialmente a barreira da exaescala no ranking TOP500 ao atingir 1,102 exaflops (1,1 quintilhões de cálculos por segundo). O feito inaugurou a era dos supercomputadores exaflópicos para modelagens climáticas de alta resolução, fusão nuclear e química quântica.",
+        "categoria": "Robótica e Hardware",
+        "ref": "frontier-exaflop-2022"
+    },
+    {
+        "id": 165,
+        "ano": "2024",
+        "resumo": "Aprovação do AI Act",
+        "país": "União Europeia",
+        "texto": "O Parlamento Europeu aprovou a Lei de Inteligência Artificial da União Europeia (EU AI Act), o primeiro arcabouço legal abrangente do mundo focado em IA. O regulamento categorizou sistemas conforme seus riscos, vedando aplicações inaceitáveis e impondo auditorias rigorosas para modelos de fronteira.",
+        "categoria": "Leis e regras",
+        "ref": "ai-act-2024"
+    },
+    {
+        "id": 166,
+        "ano": "2024",
+        "resumo": "Primeiro Implante Neuralink",
+        "país": "EUA",
+        "texto": "A empresa de neurotecnologia Neuralink realizou com sucesso seu primeiro implante cirúrgico do chip cerebral 'Telepathy' em um paciente humano paraplégico, Noland Arbaugh. Equipado com mais de 1.000 eletrodos flexíveis conectados ao córtex motor, o implante permitiu ao usuário controlar o cursor de um computador e jogar xadrez online unicamente através do pensamento.",
+        "categoria": "Robótica e Hardware",
+        "ref": "implante-neuralink-2024"
+    },
+    {
+        "id": 167,
+        "ano": "2024",
+        "resumo": "Criptografia Pós-Quântica",
+        "país": "EUA",
+        "texto": "O Instituto Nacional de Padrões e Tecnologia dos EUA (NIST) homologou formalmente os três primeiros padrões mundiais de algoritmos criptográficos resistentes a ataques de computadores quânticos (ML-KEM, ML-DSA e SLH-DSA). A regulamentação estabeleceu as diretrizes técnicas obrigatórias para proteger segredos de governos, finanças e infraestruturas digitais do mundo todo.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "criptografia-pos-quantica-2024"
+    },
+    {
+        "id": 168,
+        "ano": "2024",
+        "resumo": "Raciocínio OpenAI o1",
+        "país": "EUA",
+        "texto": "A OpenAI lançou a família de modelos de raciocínio OpenAI o1. Treinados com aprendizado por reforço para gerar cadeias de pensamento deliberadas antes de fornecer uma resposta final, os modelos demonstraram desempenho comparável a alunos de doutorado em problemas complexos de matemática competitiva, ciências exatas e geração de código algorítmico profundo.",
+        "categoria": "Inteligência Artificial",
+        "ref": "openai-o1-2024"
+    },
+    {
+        "id": 169,
+        "ano": "2024",
+        "resumo": "Pane Global do CrowdStrike Falcon",
+        "país": "EUA",
+        "texto": "Em 19 de julho de 2024, uma atualização automática de arquivo de configuração para o agente de segurança Falcon da CrowdStrike disparou um erro de leitura de memória inválida no driver de nível de kernel (Ring 0) do Windows, travando em tela azul da morte (BSOD) aproximadamente 8,5 milhões de computadores corporativos ao redor do mundo. A falha causou o cancelamento de milhares de voos, paralisou sistemas hospitalares e operações bancárias, tornando-se a maior pane de TI da história da tecnologia.",
+        "categoria": "Criptografia e Segurança",
+        "ref": "crowdstrike-falcon-pane-2024"
+    },
+    {
+        "id": 170,
+        "ano": "2024",
+        "resumo": "Processador Quântico Willow da Google",
+        "país": "EUA",
+        "texto": "A Google Quantum AI anunciou o processador quântico supercondutor Willow de 105 qubits, publicando na revista Nature a demonstração experimental definitiva da correção de erros quânticos operando 'abaixo do limiar' crítico (below-threshold). O experimento provou que o aumento metódico de qubits físicos reduz de forma exponencial a taxa de erros lógicos do sistema, superando um dos mais formidáveis obstáculos da física para a viabilização de computadores quânticos tolerantes a falhas em larga escala.",
+        "categoria": "Computação Quântica",
+        "ref": "processador-quantico-willow-2024"
+    },
+    {
+        "id": 171,
+        "ano": "2024",
+        "resumo": "Nobel Consagra Redes Neurais e IA",
+        "país": "Suécia",
+        "texto": "A Real Academia Sueca de Ciências laureou John Hopfield e Geoffrey Hinton com o Prêmio Nobel de Física por suas descobertas fundamentais que permitiram o aprendizado de máquina com redes neurais artificiais, e no dia seguinte atribuiu o Prêmio Nobel de Química a Demis Hassabis e John Jumper pelo sistema AlphaFold de predição estrutural de proteínas. O duplo reconhecimento marcou a consagração definitiva da ciência da computação e da inteligência artificial no ápice da ciência universal.",
+        "categoria": "Grandes nomes da Tecnologia",
+        "ref": "nobel-redes-neurais-ia-2024"
+    },
+    {
+        "id": 172,
+        "ano": "2025",
+        "resumo": "Agentes Autônomos de IA",
+        "país": "EUA",
+        "texto": "A indústria de tecnologia consolidou a transição de assistentes conversacionais passivos para agentes autônomos de inteligência artificial dotados de execução autônoma de tarefas no ambiente corporativo. Integrando ferramentas de navegação em telas, chamadas de APIs e computadores virtuais em segundo plano, os sistemas assumiram fluxos operacionais de programação, auditoria e finanças.",
+        "categoria": "Tecnologia surgindo",
+        "ref": "agentes-autonomos-ia-2025"
+    },
+    {
+        "id": 173,
+        "ano": "2025",
+        "resumo": "Lançamento do DeepSeek-R1",
+        "país": "China",
+        "texto": "O laboratório chinês DeepSeek lançou o modelo de raciocínio lógico DeepSeek-R1 com pesos integralmente abertos sob licença MIT, alcançando métricas competitivas com os modelos proprietários líderes mundiais em matemática, ciências exatas e geração de código a um custo de treinamento dramaticamente inferior. O avanço, fundamentado em aprendizado por reforço em larga escala e arquitetura de mistura de especialistas (MoE), sacudiu os mercados financeiros e consolidou a força da IA aberta global.",
+        "categoria": "Inteligência Artificial",
+        "ref": "deepseek-r1-2025"
+    },
+    {
+        "id": 174,
+        "ano": "2026",
+        "resumo": "OpenAI Anuncia os Dots",
+        "país": "EUA",
+        "texto": "A OpenAI revelou os Dots, uma nova classe de agentes de inteligência artificial autônomos integrados ao ChatGPT e alimentados pelo modelo GPT-6 Astra. Equipados com computadores em nuvem próprios e conectores para milhares de serviços, os dots assumem rotinas e projetos inteiros de forma contínua.",
+        "categoria": "Lançamento de produto",
+        "ref": "openai-dots-2026"
+    }
+]

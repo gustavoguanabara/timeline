@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0f111a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>História da Tecnologia — Game da Linha do Tempo</title>
+  <meta name="description" content="Jogo educativo arcade de dedução cronológica dos marcos da história da tecnologia.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components/hud.css">
+  <link rel="stylesheet" href="css/components/modal.css">
+  <link rel="stylesheet" href="css/components/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕹️</text></svg>">
+</head>
+<body class="theme-dark">
+
+  <!-- HUD Superior (Casca DOM) -->
+  <header class="game-hud" id="gameHud">
+    <div class="hud-left">
+      <button id="btnHome" class="btn-icon" title="Voltar ao Menu Inicial">🏠</button>
+      <span class="hud-badge" id="hudModeBadge"><span class="hud-mode-prefix">MODALIDADE: </span><span id="hudModeValue">GERAL</span></span>
+    </div>
+
+    <div class="hud-center">
+      <div class="score-container">
+        <span class="score-label">PLACAR:</span>
+        <span class="score-value" id="hudScore">0 / 10</span>
+      </div>
+      <div class="progress-bar-wrap" title="Progresso da Rodada">
+        <div class="progress-bar-fill" id="hudProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="hud-right">
+      <button id="btnHudHelp" class="btn-icon" title="Como Jogar (Ajuda)">❓</button>
+      <button id="btnHudLeaderboard" class="btn-icon" title="Hall da Fama (TOP 10)">🏆</button>
+      <button id="btnAudioToggle" class="btn-icon" title="Alternar Som (Mudo)">🔊</button>
+    </div>
+  </header>
+
+  <!-- Área Principal de Jogo e Canvas -->
+  <main class="game-viewport">
+    
+    <!-- Tela de Entrada / Lobby Arcade -->
+    <section class="lobby-screen" id="screenLobby">
+      <div class="lobby-card">
+        <h1 class="lobby-title">HISTÓRIA DA TECNOLOGIA</h1>
+        <p class="lobby-subtitle">O Grande Desafio Cronológico da Computação</p>
+
+        <div class="lobby-modes-container">
+          <span class="lobby-modes-label">ESCOLHA A MODALIDADE:</span>
+          <div class="lobby-modes-list" id="modeButtonsList">
+            <!-- Botões de modalidade gerados dinamicamente via JS -->
+          </div>
+        </div>
+
+        <div class="lobby-actions">
+          <button id="btnStartGame" class="btn-hero-play">▶ INICIAR PARTIDA</button>
+          <button id="btnLobbyHowToPlay" class="btn-lobby-how-to-play">📖 COMO JOGAR?</button>
+          <div class="lobby-secondary-row">
+            <button id="btnLobbyLeaderboard" class="btn-lobby-secondary">🏆 TOP 10</button>
+            <button id="btnLobbyDiagnostic" class="btn-lobby-secondary">🧪 STATUS</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Painel de Diagnóstico do Ambiente (Smoke Test / Homologação) -->
+    <section class="diagnostic-panel" id="diagnosticPanel" hidden>
+      <div class="diagnostic-card">
+        <div class="diagnostic-header">
+          <h3>🚀 Status do Ambiente de Desenvolvimento (Passo 3)</h3>
+          <button id="btnDiagnosticClose" class="btn-close" aria-label="Fechar painel">✕</button>
+        </div>
+        <p class="diagnostic-desc">
+          Este painel confirma em tempo real a integridade da arquitetura Vanilla Web, runtimes, ativos locais e APIs do navegador conforme especificado no <a href="docs/TRD.md" target="_blank">TRD</a>.
+        </p>
+
+        <div class="diagnostic-grid">
+          <div class="diag-item" id="diagServer">
+            <span class="diag-icon">🟢</span>
+            <div class="diag-info">
+              <strong>Dev Server & Runtime</strong>
+              <small id="diagServerDesc">Python HTTP Server na porta 8000</small>
+            </div>
+            <span class="diag-status badge-ok">OK</span>
+          </div>
+
+          <div class="diag-item" id="diagHistoria">
+            <span class="diag-icon">⏳</span>
+            <div class="diag-info">
+              <strong>Catálogo de Marcos</strong>
+              <small id="diagHistoriaDesc">Verificando data/historia.json...</small>
+            </div>
+            <span class="diag-status badge-pending" id="badgeHistoria">...</span>
+          </div>
+
+          <div class="diag-item" id="diagTop10">
+            <span class="diag-icon">⏳</span>
+            <div class="diag-info">
+              <strong>Ranking Arcade Semente</strong>
+              <small id="diagTop10Desc">Verificando data/top10.json...</small>
+            </div>
+            <span class="diag-status badge-pending" id="badgeTop10">...</span>
+          </div>
+
+          <div class="diag-item" id="diagImageSample">
+            <span class="diag-icon">⏳</span>
+            <div class="diag-info">
+              <strong>Acervo de Imagens 500x500</strong>
+              <small id="diagImageDesc">Testando carregamento de amostra...</small>
+            </div>
+            <span class="diag-status badge-pending" id="badgeImage">...</span>
+          </div>
+
+          <div class="diag-item" id="diagAudio">
+            <span class="diag-icon">⏳</span>
+            <div class="diag-info">
+              <strong>Web Audio API</strong>
+              <small id="diagAudioDesc">Síntese sonora procedural de ondas</small>
+            </div>
+            <span class="diag-status badge-pending" id="badgeAudio">...</span>
+          </div>
+
+          <div class="diag-item" id="diagCanvas">
+            <span class="diag-icon">⏳</span>
+            <div class="diag-info">
+              <strong>Canvas 2D Context</strong>
+              <small id="diagCanvasDesc">Motor gráfico 60 FPS com suporte a HiDPI</small>
+            </div>
+            <span class="diag-status badge-pending" id="badgeCanvas">...</span>
+          </div>
+        </div>
+
+        <div class="diagnostic-actions">
+          <button id="btnRunDiagnosticTests" class="btn-primary">🧪 Executar Testes Completos no Cliente</button>
+          <button id="btnTestSound" class="btn-secondary">🔊 Testar Efeito Sonoro Retrô</button>
+          <a href="/status" target="_blank" class="btn-link">📄 Ver endpoint /status (JSON)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canvas Principal do Jogo -->
+    <div class="canvas-container" id="canvasContainer">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+  </main>
+
+  <!-- Modal: Curiosidade Histórica / Detalhes do Card da Régua -->
+  <div class="modal-backdrop" id="modalCardDetail" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden>
+    <div class="modal-card modal-detail-card">
+      <div class="modal-header">
+        <h2 id="detailTitle">📖 DETALHE HISTÓRICO</h2>
+        <button id="btnDetailClose" class="btn-close" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="detail-grid">
+          <div class="detail-media">
+            <img id="detailImg" src="" alt="Ilustração do Marco Histórico" class="detail-photo">
+            <div class="detail-year-badge" id="detailYear">ANO: ----</div>
+          </div>
+          <div class="detail-info">
+            <h3 id="detailHeading">Título do Marco</h3>
+            <div class="detail-meta-tags">
+              <span class="meta-tag tag-country" id="detailCountry">📍 País</span>
+              <span class="meta-tag tag-category" id="detailCategory">🏷️ Categoria</span>
+            </div>
+            <p class="detail-summary" id="detailSummary">Resumo explicativo do marco histórico...</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnDetailOk" class="btn-primary">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Como Jogar / Tutorial Interativo -->
+  <div class="modal-backdrop" id="modalHowToPlay" role="dialog" aria-modal="true" aria-labelledby="howToPlayTitle" hidden>
+    <div class="modal-card modal-how-to-play">
+      <div class="modal-header">
+        <h2 id="howToPlayTitle">📖 COMO JOGAR</h2>
+        <button id="btnHowToPlayClose" class="btn-close" aria-label="Fechar">✕</button>
+      </div>
+
+      <div class="modal-body modal-how-to-play-body">
+        
+        <!-- Palco da Animação em Destaque Absoluto -->
+        <div class="tutorial-anim-stage">
+          <div class="tutorial-stage-header">
+            <span class="tutorial-live-badge">● SIMULAÇÃO EM TEMPO REAL</span>
+            <span class="tutorial-stage-title">COMO POSICIONAR NA LINHA DO TEMPO</span>
+          </div>
+
+          <div class="tutorial-canvas-scene">
+            <!-- Barra horizontal da Timeline no topo -->
+            <div class="tut-timeline-line"></div>
+
+            <!-- Card Superior Esquerdo (1946 ENIAC) -->
+            <div class="tut-card tut-card-left">
+              <img src="data/images/eniac-1946.jpg" alt="ENIAC" class="tut-card-photo">
+              <div class="tut-card-desc">ENIAC (1º Computador)</div>
+              <div class="tut-card-year tut-year-ok">1946</div>
+            </div>
+
+            <!-- Drop Zone Central Superior (Slot Alvo) -->
+            <div class="tut-drop-zone">
+              <span class="tut-plus">+</span>
+              <span class="tut-zone-hint">ENCAIXE AQUI</span>
+            </div>
+
+            <!-- Card Superior Direito (1976 Apple I) -->
+            <div class="tut-card tut-card-right">
+              <img src="data/images/apple-1976.jpg" alt="Apple I" class="tut-card-photo">
+              <div class="tut-card-desc">Apple I (Computador)</div>
+              <div class="tut-card-year tut-year-ok">1976</div>
+            </div>
+
+            <!-- Dock / Deck da jogada atual na base -->
+            <div class="tut-deck-dock">
+              <span class="tut-dock-label">DECK DO CARD EM JOGO (PARTE INFERIOR)</span>
+            </div>
+
+            <!-- Card Misterioso Animado em Movimento Livre do Deck até a Timeline -->
+            <div class="tut-moving-card-wrap">
+              <div class="tut-card tut-card-secret">
+                <img src="data/images/transistor-1947.jpg" alt="Transistor" class="tut-card-photo">
+                <div class="tut-card-desc">Invenção do Transistor</div>
+                <div class="tut-card-year tut-year-secret">
+                  <span class="tut-year-question">????</span>
+                  <span class="tut-year-revealed">1947</span>
+                </div>
+              </div>
+              <div class="tut-hand-cursor">👆</div>
+            </div>
+          </div>
+          
+          <div class="tutorial-caption-bar">
+            <span class="tut-cap-step">1. Analise o card da vez</span>
+            <span class="tut-cap-sep">➔</span>
+            <span class="tut-cap-step">2. Arraste até o slot <strong class="neon-plus">+</strong></span>
+            <span class="tut-cap-sep">➔</span>
+            <span class="tut-cap-step">3. Ano revelado (Verde = Acerto)</span>
+          </div>
+        </div>
+
+        <!-- Painel Deslizante de Instruções (Gaveta que sobe ao clicar) -->
+        <div class="tutorial-drawer" id="tutorialDrawer">
+          <div class="tutorial-drawer-header">
+            <div class="drawer-drag-pill"></div>
+            <div class="drawer-header-row">
+              <h3>📜 Regras e Instruções do Jogo</h3>
+              <button id="btnDrawerClose" class="btn-drawer-close" aria-label="Recolher instruções">✕</button>
+            </div>
+          </div>
+          <div class="tutorial-drawer-content">
+            <div class="tutorial-steps-grid">
+              <div class="tut-step-item">
+                <div class="tut-step-icon">🎯</div>
+                <div class="tut-step-text">
+                  <strong>Objetivo da Partida</strong>
+                  <p>Construa a linha do tempo acertando a posição cronológica de <strong>10 marcos históricos</strong> da tecnologia.</p>
+                </div>
+              </div>
+
+              <div class="tut-step-item">
+                <div class="tut-step-icon">🕹️</div>
+                <div class="tut-step-text">
+                  <strong>Como Fazer a Jogada</strong>
+                  <p>O card da vez fica na parte inferior com ano secreto <code>????</code>. <strong>Arraste-o</strong> ou dê um <strong>toque direto</strong> para encaixá-lo no slot <strong class="neon-plus">+</strong> correto entre os eventos anteriores e posteriores.</p>
+                </div>
+              </div>
+
+              <div class="tut-step-item">
+                <div class="tut-step-icon">✨</div>
+                <div class="tut-step-text">
+                  <strong>Acertos e Erros</strong>
+                  <p>Ao soltar, o ano é revelado: fundo <span class="badge-tut-green">VERDE</span> indica acerto (+1 pt) e fundo <span class="badge-tut-red">VERMELHO</span> indica erro. O marco sempre se fixa no lugar cronológico exato.</p>
+                </div>
+              </div>
+
+              <div class="tut-step-item">
+                <div class="tut-step-icon">🔍</div>
+                <div class="tut-step-text">
+                  <strong>Navegue e Curiosidades</strong>
+                  <p>Arraste a linha do tempo ou use as setas ◀ ▶ para explorar os anos. Você pode clicar em qualquer card fixado para ler curiosidades históricas completas!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer modal-how-to-play-footer">
+        <button id="btnToggleInstructions" class="btn-toggle-instructions">
+          <span id="toggleInstructionsIcon">▲</span>
+          <span id="toggleInstructionsText">Ler mais instruções</span>
+        </button>
+        <button id="btnHowToPlayOk" class="btn-primary">Entendido, Vamos Jogar!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Fim de Partida / Resultado -->
+  <div class="modal-backdrop" id="modalGameOver" role="dialog" aria-modal="true" aria-labelledby="gameOverTitle" hidden>
+    <div class="modal-card modal-game-over">
+      <div class="modal-header">
+        <h2 id="gameOverTitle">🏁 PARTIDA CONCLUÍDA</h2>
+      </div>
+      <div class="modal-body">
+        <div class="result-score-hero">
+          <span class="result-score-val" id="resultScore">0 / 10</span>
+          <span class="result-score-label">ACERTOS CRONOLÓGICOS</span>
+        </div>
+        <p class="result-rank-title" id="resultRankTitle">Mestre da Computação</p>
+
+        <div class="result-emojis-wrap">
+          <p class="result-emojis-label">Sequência das suas jogadas:</p>
+          <div class="result-emojis" id="resultEmojis">🟩🟩🟩🟥🟩🟩🟩🟩🟥🟩</div>
+        </div>
+
+        <p class="result-explanation" id="resultExplanation">
+          Excelente desempenho! Todos os 11 marcos estão agora visíveis na régua temporal.
+        </p>
+      </div>
+      <div class="modal-footer modal-footer-column">
+        <div class="footer-actions-row">
+          <button id="btnShareResult" class="btn-accent-share">📋 Copiar Resultado (Compartilhar)</button>
+          <button id="btnPlayAgain" class="btn-primary">🔄 Jogar Novamente</button>
+        </div>
+        <div class="footer-actions-secondary">
+          <button id="btnGameOverLeaderboard" class="btn-secondary">🏆 Ver Hall da Fama</button>
+          <button id="btnGameOverHome" class="btn-secondary">🏠 Voltar ao Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Hall da Fama / Top 10 Arcade -->
+  <div class="modal-backdrop" id="modalLeaderboard" role="dialog" aria-modal="true" aria-labelledby="leaderboardTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="leaderboardTitle">🏆 HALL DA FAMA ARCADE</h2>
+        <button id="btnLeaderboardClose" class="btn-close" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtitle">Os 10 melhores recordistas da História da Tecnologia:</p>
+        <table class="leaderboard-table" id="leaderboardTable">
+          <thead>
+            <tr>
+              <th>POS</th>
+              <th>JOGADOR</th>
+              <th>PONTOS</th>
+              <th>DATA</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <!-- Injetado dinamicamente via leaderboard.js -->
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button id="btnExportTop10" class="btn-secondary" title="Baixar JSON atualizado para commit">💾 Exportar top10.json</button>
+        <button id="btnLeaderboardOk" class="btn-primary">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Inserção de Novo Recorde (3 Letras) -->
+  <div class="modal-backdrop" id="modalRecorde" role="dialog" aria-modal="true" aria-labelledby="recordeTitle" hidden>
+    <div class="modal-card modal-arcade-entry">
+      <div class="modal-header">
+        <h2 id="recordeTitle">🌟 NOVO RECORDE ALCANÇADO!</h2>
+        <button id="btnRecordeClose" class="btn-close" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Parabéns! Sua pontuação <strong id="recordeScoreVal">10/10</strong> entrou para o Top 10!</p>
+        <p class="arcade-prompt">DIGITE SUAS INICIAIS (3 LETRAS):</p>
+        <div class="initials-input-wrap">
+          <input type="text" id="inputInitials" maxlength="3" autocomplete="off" placeholder="AAA" autofocus>
+        </div>
+        <small class="error-msg" id="initialsError" hidden>Informe exatamente 3 letras maiúsculas (ex: ADA, TNG, LIN).</small>
+      </div>
+      <div class="modal-footer">
+        <button id="btnPularRecorde" class="btn-secondary">Pular</button>
+        <button id="btnSalvarRecorde" class="btn-primary">GRAVAR RECORDE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação Temporário -->
+  <div class="toast-notification" id="toastMessage" hidden>
+    <span id="toastText">Mensagem</span>
+  </div>
+
+  <!-- Aviso de Orientação Paisagem no Celular -->
+  <aside class="landscape-notice" id="landscapeNotice" aria-live="polite">
+    <div class="landscape-notice-card">
+      <div class="landscape-phone-icon">📱</div>
+      <h2 class="landscape-notice-title">GIRE PARA O MODO RETRATO</h2>
+      <p class="landscape-notice-desc">Para a melhor experiência e ergonomia na linha do tempo, posicione seu celular na vertical.</p>
+    </div>
+  </aside>
+
+  <!-- Inicialização dos ES Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
