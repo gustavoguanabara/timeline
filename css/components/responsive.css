@@ -1,0 +1,264 @@
+/* css/components/responsive.css - Adaptações para Telas Mobile, Tablets e Touch */
+
+/* ==========================================================================
+   AVISO DE ORIENTAÇÃO HORIZONTAL (LANDSCAPE) NO MOBILE
+   ========================================================================== */
+.landscape-notice {
+  display: none;
+}
+
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 950px) {
+  .landscape-notice {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 9999;
+    background: rgba(10, 12, 19, 0.98);
+    backdrop-filter: blur(14px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .landscape-notice-card {
+    background: rgba(26, 30, 46, 0.95);
+    border: 1px solid var(--accent-neon);
+    box-shadow: 0 10px 40px rgba(115, 218, 202, 0.25);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .landscape-phone-icon {
+    font-size: 2.4rem;
+    animation: rotatePhone 2.2s infinite ease-in-out;
+  }
+
+  .landscape-notice-title {
+    font-family: var(--font-family-mono);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--accent-neon);
+    letter-spacing: 0.04em;
+  }
+
+  .landscape-notice-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+}
+
+@keyframes rotatePhone {
+  0%, 15% {
+    transform: rotate(0deg);
+  }
+  45%, 70% {
+    transform: rotate(-90deg);
+  }
+  90%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ==========================================================================
+   ADAPTAÇÕES PARA CELULARES E TELAS ESTREITAS (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* HUD Slim em Linha Única (Sem quebrar layout) */
+  .game-hud {
+    height: 42px;
+    padding-left: max(10px, env(safe-area-inset-left));
+    padding-right: max(10px, env(safe-area-inset-right));
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .hud-left {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .hud-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hud-center {
+    gap: 8px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .score-label {
+    display: none; /* No mobile, o placar '0 / 10' é autoexplicativo */
+  }
+
+  .score-value {
+    font-size: 0.88rem;
+  }
+
+  .progress-bar-wrap {
+    width: 75px;
+    height: 5px;
+  }
+
+  .hud-right {
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 0.95rem;
+    touch-action: manipulation;
+  }
+
+  /* Lobby Arcade Ergonômico */
+  .lobby-card {
+    padding: 20px 16px;
+    width: 96%;
+    max-height: 92dvh;
+    overflow-y: auto;
+  }
+
+  .lobby-title {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+
+  .lobby-subtitle {
+    font-size: 0.82rem;
+    margin-bottom: 16px;
+  }
+
+  .lobby-modes-list {
+    max-height: 170px;
+  }
+
+  .mode-option-btn {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+
+  .btn-hero-play {
+    padding: 12px 18px;
+    font-size: 0.98rem;
+    min-height: 48px;
+  }
+
+  .btn-lobby-secondary {
+    min-height: 42px;
+    font-size: 0.78rem;
+    padding: 8px 10px;
+  }
+
+  /* Modais com Tamanho de Toque Confortável */
+  .modal-card {
+    width: 95%;
+    max-height: 92dvh;
+    overflow-y: auto;
+  }
+
+  .detail-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .detail-media {
+    width: 130px;
+  }
+
+  .detail-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .detail-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .detail-summary {
+    font-size: 0.84rem;
+    max-height: 140px;
+  }
+
+  .detail-meta-tags {
+    justify-content: center;
+  }
+
+  .footer-actions-row,
+  .footer-actions-secondary {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-actions-row button,
+  .footer-actions-secondary button,
+  .modal-footer button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  /* Painel de Diagnóstico */
+  .diagnostic-panel {
+    top: 8px;
+    width: 96%;
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+
+  .diagnostic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Telas ultra estreitas (ex: celulares < 380px como iPhone SE / Galaxy Mini) */
+@media (max-width: 380px) {
+  .hud-mode-prefix {
+    display: none; /* Oculta 'MODALIDADE: ' exibindo apenas o nome */
+  }
+
+  .hud-badge {
+    max-width: 80px;
+  }
+
+  .hud-right {
+    gap: 4px;
+  }
+
+  .progress-bar-wrap {
+    width: 50px;
+  }
+
+  .btn-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .lobby-title {
+    font-size: 1.25rem;
+  }
+}

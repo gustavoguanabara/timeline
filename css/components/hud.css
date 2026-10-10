@@ -1,0 +1,87 @@
+/* css/components/hud.css - Estilos da HUD Superior Slim */
+
+.game-hud {
+  height: 42px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+  padding-top: env(safe-area-inset-top, 0);
+  z-index: 10;
+}
+
+.hud-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hud-badge {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  font-size: 0.68rem;
+  font-family: var(--font-family-mono);
+  color: var(--accent-magenta);
+}
+
+.hud-center {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.score-label {
+  font-size: 0.7rem;
+  font-family: var(--font-family-mono);
+  color: var(--text-muted);
+}
+
+.score-value {
+  font-size: 0.95rem;
+  font-family: var(--font-family-mono);
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.progress-bar-wrap {
+  width: 140px;
+  height: 6px;
+  background: var(--bg-surface);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-neon), var(--accent-cyan));
+  transition: width 0.3s ease;
+}
+
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+}

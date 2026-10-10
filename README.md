@@ -1,110 +1,84 @@
-# Pipeline de Imagens Históricas - História da Tecnologia
+# História da Tecnologia — Game Educacional da Linha do Tempo
 
-Este módulo automatiza a busca, download e processamento de imagens históricas para cada um dos 174 marcos tecnológicos presentes no arquivo [`data/historia.json`](file:///Users/gustavoguanabara/Documents/Projetos-Antigravity/historia-tecnologia/data/historia.json).
+Jogo educativo arcade retrô de dedução cronológica dos grandes marcos da história da computação e tecnologia.
+Construído com arquitetura **Vanilla Web pura** (HTML5 Canvas 2D, CSS3 modular e JavaScript moderno via ES Modules).
 
 ---
 
-## 📁 Estrutura de Pastas e Arquivos
+## 🕹️ Como Jogar
+
+1. Um **card misterioso** é sorteado com foto histórica, título e resumo, mas com o ano oculto (`????`).
+2. Sua missão é **deduzir a ordem temporal** e posicionar o card na régua cronológica entre os acontecimentos já revelados.
+3. Arraste até uma das **Drop Zones** marcadas com o glifo `+` e solte para confirmar o palpite (ou clique na zona correspondente no celular).
+4. **Acertou**: O ano acende em verde, você ganha 100 pontos, ouve sons retrô e avança na linha do tempo.
+5. **Errou**: O card se encaixa na posição cronológica real com o ano em vermelho e você recebe feedback pedagógico do erro.
+6. Ao final da rodada de 10 fatos históricos, cadastre suas 3 iniciais no **Hall da Fama (TOP 10)** e compartilhe seu desempenho no estilo Wordle!
+
+---
+
+## 🚀 Como Executar Localmente
+
+Como a aplicação faz uso de **ES Modules nativos** (`import`/`export`) e carregamento de dados JSON via `fetch()`, execute através de um servidor HTTP local:
+
+### Opção 1: Python 3 (Nativo)
+```bash
+python3 -m http.server 8080
+```
+Em seguida, acesse no navegador: [http://localhost:8080](http://localhost:8080)
+
+### Opção 2: Node.js (npx serve / http-server)
+```bash
+npx serve .
+# ou: npx http-server -p 8080
+```
+
+### Opção 3: PHP (Nativo)
+```bash
+php -S localhost:8080
+```
+
+---
+
+## 📁 Estrutura de Arquivos da Distribuição (`dist/`)
 
 ```text
-historia-tecnologia/
-├── data/
-│   ├── historia.json              # Base com os 174 fatos históricos
-│   └── images/
-│       ├── temp/                  # Arquivos originais baixados da web ({ref}.{ext})
-│       │   └── download_metadata.json # Log e metadados das fontes consultadas
-│       └── *.jpg                  # Imagens finais quadradas 500x500 JPEG ({ref}.jpg)
-├── scripts/                       # Módulos Python e scripts operacionais
-│   ├── __init__.py                # Pacote Python de scripts
-│   ├── run_pipeline.py            # Script orquestrador de ponta a ponta
-│   ├── download_images.py         # Script de busca e download inteligente
-│   └── crop_images.py             # Script de Smart Cropping e redimensionamento 500x500
-├── docs/                          # Documentação técnica e governança viva (SPEC, ARCHITECTURE, DECISIONS, CONTEXT)
-├── .agents/                       # Regras e skills para agentes autônomos
-├── requirements.txt               # Dependências Python
-└── README.md                      # Este arquivo
+dist/
+├── index.html                   # Ponto de entrada e casca da SPA
+├── README.md                    # Manual de execução e informações da distribuição
+├── css/                         # Folhas de estilo modulares
+│   ├── style.css                # Variáveis globais, reset e layout base
+│   └── components/
+│       ├── hud.css              # Barra superior slim e placar
+│       ├── modal.css            # Modais (Lobby, Game Over, Top 10, Detalhes, Ajuda)
+│       └── responsive.css       # Regras responsivas e suporte a toque móvel
+├── js/                          # 8 módulos JavaScript ES Modules
+│   ├── main.js                  # Ponto de entrada da aplicação e binding de UI
+│   ├── game.js                  # Máquina de estados e loop da partida
+│   ├── timeline.js              # Cálculo de slots, posições e validação cronológica
+│   ├── canvas-renderer.js       # Renderização 60 FPS no Canvas 2D
+│   ├── input-handler.js         # Arraste do mouse, toque móvel e inércia física
+│   ├── audio.js                 # Síntese sonora retrô via Web Audio API e háptico
+│   ├── leaderboard.js           # Hall da Fama Arcade Top 10 com LocalStorage
+│   └── data-loader.js           # Carregamento e pré-aquecimento de dados e imagens
+└── data/
+    ├── historia.json            # Catálogo dos 174 marcos históricos da computação
+    ├── top10.json               # Semente estática dos recordes do Hall da Fama
+    └── images/                  # 174 imagens processadas em 500x500 JPEG
 ```
 
 ---
 
-## ⚙️ Instalação das Dependências
+## 🌐 Publicação em Servidores Estáticos
 
-Instale os pacotes necessários via `pip`:
+Este diretório `dist/` está 100% pronto para publicação estática:
 
-```bash
-pip install -r requirements.txt
-```
-
-As principais bibliotecas utilizadas são:
-- **`requests`**: requisições HTTP para as APIs públicas da Wikipedia e Wikimedia Commons.
-- **`Pillow`**: leitura, decodificação, conversão de formatos e redimensionamento de alta qualidade (`LANCZOS`).
-- **`opencv-python-headless`**: visão computacional para detecção de faces e cálculo de saliência visual / gradientes.
-- **`numpy`**: operações matriciais e cálculo do mapa de atenção visual.
+- **GitHub Pages**: Configure o diretório de publicação para `dist` ou envie seu conteúdo para o branch `gh-pages`.
+- **Vercel / Netlify / Cloudflare Pages**: Aponte a pasta de deploy (Publish Directory) para `dist/`.
+- **Apache / Nginx / S3**: Copie todos os arquivos desta pasta diretamente para a raiz do servidor web.
 
 ---
 
-## 🚀 Como Executar
+## 📜 Licença e Créditos
 
-### 1. Execução Completa (Pipeline de Ponta a Ponta)
-Para buscar, baixar todos os originais que faltarem e gerar os recortes 500x500 JPEG:
-
-```bash
-python3 scripts/run_pipeline.py
-```
-
-### 2. Executar Apenas o Download
-Para baixar apenas os arquivos originais para `data/images/temp`:
-
-```bash
-python3 scripts/run_pipeline.py --download-only
-# ou: python3 scripts/download_images.py
-```
-
-### 3. Executar Apenas o Crop Inteligente
-Para reprocessar os recortes de 500x500 a partir dos arquivos já existentes em `data/images/temp`:
-
-```bash
-python3 scripts/run_pipeline.py --crop-only
-# ou: python3 scripts/crop_images.py
-```
-
----
-
-## 🛠️ Opções e Argumentos Avançados
-
-Todos os scripts aceitam argumentos de linha de comando para controle granular:
-
-| Parâmetro | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `--limit N` | Processa apenas os primeiros $N$ registros | `python3 scripts/run_pipeline.py --limit 5` |
-| `--ref REF` | Processa exclusivamente um registro específico | `python3 scripts/run_pipeline.py --ref abaco-2400` |
-| `--force` | Força novo download/crop sobrescrevendo arquivos existentes | `python3 scripts/run_pipeline.py --force` |
-| `--delay S` | Intervalo em segundos entre requisições de download (padrão: 0.25s) | `python3 scripts/run_pipeline.py --delay 0.5` |
-
----
-
-## 🧠 Como Funciona a Busca Inteligente (`download_images.py`)
-
-1. **Extração Contextual de Termos**: O script analisa tanto o campo `resumo` quanto o campo `texto`, gerando queries candidatas com termos destacados entre aspas, inventores/figuras históricas e nomes limpos.
-2. **Consultas em Camadas**:
-   - Wikipedia em Português (`pt.wikipedia.org`)
-   - Wikipedia em Inglês (`en.wikipedia.org`)
-   - Wikimedia Commons (`commons.wikimedia.org`)
-3. **Imagens Otimizadas**: Solicita miniaturas na faixa de 800px no próprio servidor da Wikimedia (`pithumbsize`/`iiurlwidth`), evitando o tráfego de arquivos desnecessariamente pesados.
-4. **Armazenamento Seguro**: As imagens originais são validadas e salvas em `data/images/temp/{ref}.{ext}` preservando o formato original (`.jpg`, `.png`, `.webp`, `.gif`), com registro detalhado em `download_metadata.json`.
-
----
-
-## ✂️ Como Funciona o Smart Crop 500x500 (`crop_images.py`)
-
-O script encontra o ponto visual mais importante da imagem através de visão computacional em dois níveis:
-
-1. **Detecção Facial (Haar Cascades)**:
-   - Para inventores e personalidades históricas (ex: Ada Lovelace, Alan Turing, Charles Babbage, Guido van Rossum), os rostos são detectados e posicionados de forma harmônica na composição (entre o terço superior e o centro), evitando cortes de cabeça.
-2. **Saliência Visual por Gradiente e Contraste**:
-   - Para equipamentos, máquinas e ilustrações (ex: Ábaco, Pascalina, ENIAC, circuitos, logotipos), calcula o mapa de gradientes espaciais com filtros de Sobel e variação de textura local (Laplaciano).
-   - Aplica uma atenuação suave em direção ao centro (*Gaussian Center Bias*), priorizando a área focal de maior densidade de informação.
-3. **Tratamento de Transparência**:
-   - Converte imagens com transparência (RGBA/PNG) sobre fundo branco puro antes da conversão para JPEG.
-4. **Formato e Resolução Finais**:
-   - Realiza o recorte quadrado centralizado no ponto focal e faz o resampling com `LANCZOS` para exatamente **500x500 pixels**, salvando em `data/images/{ref}.jpg` no formato **JPEG**.
+- Dados históricos e curadoria baseados em fontes públicas da Wikipedia e Wikimedia Commons.
+- Todas as ilustrações e fotos históricas seguem licenças livres ou estão em domínio público.
