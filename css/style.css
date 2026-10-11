@@ -489,6 +489,35 @@ button {
   transform: translateY(-1px);
 }
 
+.lobby-version-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.lobby-version-tag {
+  font-family: var(--font-family-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(36, 41, 62, 0.55);
+  border: 1px solid rgba(59, 66, 97, 0.6);
+  padding: 2px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.lobby-version-tag:hover {
+  opacity: 1;
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 8px rgba(125, 207, 255, 0.25);
+}
+
 /* ==========================================================================
    TOAST NOTIFICATION
    ========================================================================== */
