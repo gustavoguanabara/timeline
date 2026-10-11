@@ -409,8 +409,13 @@
       <div class="landscape-phone-icon">📱</div>
       <h2 class="landscape-notice-title">GIRE PARA O MODO RETRATO</h2>
       <p class="landscape-notice-desc">Para a melhor experiência e ergonomia na linha do tempo, posicione seu celular na vertical.</p>
+      <button type="button" id="btnDismissLandscape" class="btn-dismiss-landscape">Continuar na horizontal</button>
     </div>
   </aside>
+
+  <!-- Suporte nativo ao Taptic Engine para iOS Safari 17.4+ via Switch Hack -->
+  <input type="checkbox" id="hapticSwitch" switch style="position:fixed;opacity:0;pointer-events:none;width:1px;height:1px;top:-100px;left:-100px;" aria-hidden="true" tabindex="-1">
+  <label for="hapticSwitch" id="hapticLabel" style="position:fixed;opacity:0;pointer-events:none;width:1px;height:1px;top:-100px;left:-100px;" aria-hidden="true" tabindex="-1"></label>
 
   <!-- Inicialização dos ES Modules -->
   <script type="module" src="js/main.js"></script>

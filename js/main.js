@@ -113,6 +113,54 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateAudioButton();
   });
 
+  // Gerenciamento Ativo de Orientação Paisagem no Celular
+  const landscapeNotice = document.getElementById('landscapeNotice');
+  const btnDismissLandscape = document.getElementById('btnDismissLandscape');
+  let landscapeDismissed = false;
+
+  function updateOrientationNotice() {
+    if (!landscapeNotice) return;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const isLandscape = w > h;
+
+    // Detecta se o dispositivo possui toque
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+
+    // Celular na horizontal: largura > altura, altura <= 650px e (é touch ou tela compacta <= 1050px)
+    const isMobileLandscape = isLandscape && h <= 650 && (isTouch || w <= 1050);
+
+    if (isMobileLandscape) {
+      document.body.classList.add('is-mobile-landscape');
+      if (!landscapeDismissed) {
+        landscapeNotice.classList.remove('dismissed');
+        landscapeNotice.style.display = 'flex';
+      }
+    } else {
+      document.body.classList.remove('is-mobile-landscape');
+      landscapeDismissed = false; // Reseta dispensa quando o jogador retorna o celular para vertical
+      landscapeNotice.classList.remove('dismissed');
+      landscapeNotice.style.display = 'none';
+    }
+  }
+
+  if (btnDismissLandscape) {
+    btnDismissLandscape.addEventListener('click', () => {
+      landscapeDismissed = true;
+      if (landscapeNotice) {
+        landscapeNotice.classList.add('dismissed');
+        landscapeNotice.style.display = 'none';
+      }
+    });
+  }
+
+  window.addEventListener('resize', updateOrientationNotice);
+  window.addEventListener('orientationchange', updateOrientationNotice);
+  if (window.screen && window.screen.orientation) {
+    window.screen.orientation.addEventListener('change', updateOrientationNotice);
+  }
+  updateOrientationNotice();
+
   // Alternar diagnóstico
   if (btnSmokeTestToggle) {
     btnSmokeTestToggle.addEventListener('click', () => {

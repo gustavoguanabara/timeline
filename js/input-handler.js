@@ -32,10 +32,10 @@ export class InputHandler {
     // Histórico circular para cálculo preciso de velocidade de arremesso (flick)
     this.moveHistory = [];
 
-    // Conectar callback de vibração sutil ao alinhar com uma Drop Zone
+    // Conectar callback de vibração ao alinhar magneticamente com uma Drop Zone
     this.renderer.onDropZoneHoverChange = (zoneIndex) => {
       if (zoneIndex >= 0) {
-        triggerHaptic(12);
+        triggerHaptic(30);
       }
     };
 
@@ -156,7 +156,7 @@ export class InputHandler {
       }
     }
 
-    // 3. Verificar se tocou no Card Misterioso Ativo no Deck Inferior
+    // 3. Verificar se tocou no Card Misterioso Ativo no Deck Inferior (Pegar a carta!)
     if (r.activeCard && !r.animatingCard) {
       const deckX = r.width / 2 - r.activeCardWidth / 2;
       const deckY = r.deckCenterY - r.activeCardHeight / 2;
@@ -165,6 +165,8 @@ export class InputHandler {
       if (coords.x >= deckX - hitMargin && coords.x <= deckX + r.activeCardWidth + hitMargin &&
           coords.y >= deckY - hitMargin && coords.y <= deckY + r.activeCardHeight + hitMargin) {
         this.interactionType = 'DECK_CARD';
+        triggerHaptic(40); // Feedback tátil imediato no milissegundo em que o dedo encosta na carta
+        if (this.options.onPickSound) this.options.onPickSound();
         return;
       }
     }
@@ -216,7 +218,7 @@ export class InputHandler {
         r.isDraggingCard = true;
         r.isCardSelected = false; // Arraste sobrepõe seleção
         r.hoverDropZoneIndex = -1;
-        triggerHaptic(15);
+        triggerHaptic(30);
         if (this.options.onPickSound) this.options.onPickSound();
       }
 
@@ -293,12 +295,12 @@ export class InputHandler {
     if (this.interactionType === 'DECK_CARD') {
       if (!this.hasMovedSignificantly && r.activeCard) {
         r.isCardSelected = !r.isCardSelected;
-        triggerHaptic(r.isCardSelected ? 20 : 10);
+        triggerHaptic(r.isCardSelected ? 40 : 25);
         if (this.options.onPickSound) this.options.onPickSound();
       }
     }
 
-    // 2. Conclusão de Arraste do Card
+    // 2. Conclusão de Arraste do Card (Soltou a carta!)
     if (this.interactionType === 'DRAG_CARD') {
       r.isDraggingCard = false;
       const targetZone = r.hoverDropZoneIndex;
@@ -306,12 +308,13 @@ export class InputHandler {
 
       if (targetZone >= 0 && r.activeCard) {
         // Soltou em uma Drop Zone válida!
-        triggerHaptic(25);
+        triggerHaptic(50); // Feedback tátil marcante ao soltar na linha do tempo
         if (this.options.onDropCard) {
           this.options.onDropCard(targetZone, r.activeCard, { x: r.dragX, y: r.dragY });
         }
       } else if (r.activeCard) {
         // Soltou fora: retornar suavemente ao deck com efeito elástico
+        triggerHaptic(35); // Feedback tátil ao soltar a carta fora e retorná-la
         const deckX = r.width / 2;
         const deckY = r.deckCenterY;
         r.animateCardDrop(r.activeCard, r.dragX, r.dragY, deckX, deckY, null);

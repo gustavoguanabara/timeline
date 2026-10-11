@@ -20,6 +20,54 @@ function getAudioContext() {
   return audioCtx;
 }
 
+// Configurar a sessão de áudio para categoria 'playback' (iOS Safari 16.4+)
+// Isso instrui o sistema a tratar o áudio como mídia ativa, reproduzindo som mesmo no modo silencioso/vibrar
+if (typeof navigator !== 'undefined' && 'audioSession' in navigator) {
+  try {
+    navigator.audioSession.type = 'playback';
+  } catch (_) {}
+}
+
+let audioUnlocked = false;
+
+/**
+ * Eleva a sessão de áudio da página para o canal de mídia ativa (playback),
+ * contornando a chave física de mudo/vibrar do iPhone e desbloqueando o AudioContext.
+ */
+export function unlockAudioForSilentMode() {
+  if (audioUnlocked) return;
+  audioUnlocked = true;
+
+  if (typeof navigator !== 'undefined' && 'audioSession' in navigator) {
+    try {
+      navigator.audioSession.type = 'playback';
+    } catch (_) {}
+  }
+
+  const ctx = getAudioContext();
+  if (ctx && ctx.state === 'suspended') {
+    ctx.resume();
+  }
+
+  // Fallback para iOS: reproduz micro-áudio mudo via HTML5 para forçar a sessão de playback
+  try {
+    const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA');
+    silentAudio.volume = 0.01;
+    silentAudio.play().catch(() => {});
+  } catch (_) {}
+}
+
+// Auto-desbloqueio no primeiro gesto de interação do usuário
+if (typeof window !== 'undefined') {
+  const unlockEvents = ['touchstart', 'pointerdown', 'click'];
+  const unlockHandler = () => {
+    unlockAudioForSilentMode();
+  };
+  unlockEvents.forEach(evt => {
+    window.addEventListener(evt, unlockHandler, { capture: true, once: true, passive: true });
+  });
+}
+
 export function isAudioMuted() {
   return isMuted;
 }
@@ -57,14 +105,59 @@ export function playCardPick() {
   osc.stop(ctx.currentTime + 0.05);
 }
 
+let hapticSwitchLabel = null;
+
+function getHapticSwitchLabel() {
+  if (typeof document === 'undefined') return null;
+  if (!hapticSwitchLabel) {
+    let label = document.getElementById('hapticLabel');
+    let input = document.getElementById('hapticSwitch');
+    if (!input && document.body) {
+      input = document.createElement('input');
+      input.type = 'checkbox';
+      input.id = 'hapticSwitch';
+      input.setAttribute('switch', '');
+      input.style.cssText = 'position:fixed;opacity:0;pointer-events:none;width:1px;height:1px;top:-100px;left:-100px;';
+      input.setAttribute('aria-hidden', 'true');
+      input.tabIndex = -1;
+      document.body.appendChild(input);
+    }
+    if (!label && document.body) {
+      label = document.createElement('label');
+      label.htmlFor = 'hapticSwitch';
+      label.id = 'hapticLabel';
+      label.style.cssText = 'position:fixed;opacity:0;pointer-events:none;width:1px;height:1px;top:-100px;left:-100px;';
+      label.setAttribute('aria-hidden', 'true');
+      label.tabIndex = -1;
+      document.body.appendChild(label);
+    }
+    hapticSwitchLabel = label;
+  }
+  return hapticSwitchLabel;
+}
+
 /**
- * Disparo não-bloqueante de vibração háptica no aparelho (Web Vibration API)
+ * Disparo universal de vibração háptica no aparelho:
+ * 1. iOS Safari (17.4+): Aciona o Taptic Engine do iPhone via Native Switch Workaround
+ * 2. Android / Chrome / Firefox: Dispara a Web Vibration API com calibração física sólida
  */
-export function triggerHaptic(pattern = 15) {
-  if (isMuted) return;
+export function triggerHaptic(pattern = 40) {
+  // 1. Taptic Engine no iOS Safari via Switch Hack
+  try {
+    const label = getHapticSwitchLabel();
+    if (label) {
+      label.click();
+    }
+  } catch (_) {}
+
+  // 2. Web Vibration API no Android (independente de áudio mudo)
   if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') {
     try {
-      navigator.vibrate(pattern);
+      let safePattern = pattern;
+      if (typeof pattern === 'number' && pattern < 35) {
+        safePattern = 35; // Calibração mínima para motores Android não filtrarem o pulso
+      }
+      navigator.vibrate(safePattern);
     } catch (_) {}
   }
 }

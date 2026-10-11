@@ -5,57 +5,91 @@
    ========================================================================== */
 .landscape-notice {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 99999;
+  background: rgba(10, 12, 19, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
 }
 
-@media (orientation: landscape) and (max-height: 520px) and (max-width: 950px) {
-  .landscape-notice {
+.landscape-notice-card {
+  background: rgba(26, 30, 46, 0.96);
+  border: 1px solid var(--accent-neon);
+  box-shadow: 0 10px 40px rgba(115, 218, 202, 0.25);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.landscape-phone-icon {
+  font-size: 2.5rem;
+  animation: rotatePhone 2.2s infinite ease-in-out;
+}
+
+.landscape-notice-title {
+  font-family: var(--font-family-mono);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent-neon);
+  letter-spacing: 0.04em;
+}
+
+.landscape-notice-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.btn-dismiss-landscape {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-dismiss-landscape:hover,
+.btn-dismiss-landscape:active {
+  border-color: var(--accent-neon);
+  color: var(--accent-neon);
+  background: rgba(115, 218, 202, 0.1);
+}
+
+/* 1. Ativação via CSS para celulares modernos em landscape (até 1050px de largura e até 650px de altura) */
+@media (orientation: landscape) and (max-height: 650px) and (max-width: 1050px) {
+  .landscape-notice:not(.dismissed) {
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    z-index: 9999;
-    background: rgba(10, 12, 19, 0.98);
-    backdrop-filter: blur(14px);
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    text-align: center;
   }
+}
 
-  .landscape-notice-card {
-    background: rgba(26, 30, 46, 0.95);
-    border: 1px solid var(--accent-neon);
-    box-shadow: 0 10px 40px rgba(115, 218, 202, 0.25);
-    border-radius: var(--radius-md);
-    padding: 24px 28px;
-    max-width: 440px;
+/* 2. Ativação complementar para dispositivos de toque (pointer coarse) em landscape com altura compacta */
+@media (orientation: landscape) and (pointer: coarse) and (max-height: 700px) {
+  .landscape-notice:not(.dismissed) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
   }
+}
 
-  .landscape-phone-icon {
-    font-size: 2.4rem;
-    animation: rotatePhone 2.2s infinite ease-in-out;
-  }
-
-  .landscape-notice-title {
-    font-family: var(--font-family-mono);
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--accent-neon);
-    letter-spacing: 0.04em;
-  }
-
-  .landscape-notice-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.45;
-  }
+/* 3. Ativação forçada garantida via JavaScript */
+body.is-mobile-landscape .landscape-notice:not(.dismissed) {
+  display: flex !important;
 }
 
 @keyframes rotatePhone {
