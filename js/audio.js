@@ -245,3 +245,43 @@ export function playFanfare() {
     osc.stop(startTime + 0.3);
   });
 }
+
+/**
+ * Jingle retrô de encerramento de partida quando o jogador não atinge o Top 10
+ * Sequência cadencial descendente suave estilo arcade (Sol4 -> Fá4 -> Mib4 -> Dó4)
+ */
+export function playGameOver() {
+  triggerHaptic([35, 60, 35]);
+  if (isMuted) return;
+  const ctx = getAudioContext();
+  if (!ctx) return;
+
+  // Notas: Sol4 (392Hz), Fá4 (349.23Hz), Mib4 (311.13Hz), Dó4 (261.63Hz)
+  const notes = [
+    { freq: 392.00, dur: 0.13, type: 'triangle', gain: 0.18 },
+    { freq: 349.23, dur: 0.13, type: 'triangle', gain: 0.18 },
+    { freq: 311.13, dur: 0.15, type: 'triangle', gain: 0.18 },
+    { freq: 261.63, dur: 0.45, type: 'triangle', gain: 0.22 }
+  ];
+
+  let currentTime = ctx.currentTime;
+  notes.forEach((note) => {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = note.type;
+    osc.frequency.setValueAtTime(note.freq, currentTime);
+
+    gain.gain.setValueAtTime(note.gain, currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, currentTime + note.dur);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc.start(currentTime);
+    osc.stop(currentTime + note.dur);
+
+    currentTime += (note.dur * 0.85); // Suave legato entre notas
+  });
+}
+

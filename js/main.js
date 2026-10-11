@@ -5,7 +5,7 @@
 
 import { loadHistoria, loadTop10Seed, getEligibleCategories, preloadImage, preloadBatch } from './data-loader.js';
 import { getLeaderboard, isEligibleForTop10, addRecord, exportTop10JSON, getLastPlayerRecord } from './leaderboard.js';
-import { playCardPick, playSuccess, playError, playFanfare, isAudioMuted, toggleAudioMute } from './audio.js';
+import { playCardPick, playSuccess, playError, playFanfare, playGameOver, isAudioMuted, toggleAudioMute } from './audio.js';
 import { CanvasRenderer } from './canvas-renderer.js';
 import { InputHandler } from './input-handler.js';
 import { GameEngine, GamePhase } from './game.js';
@@ -420,6 +420,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         modalRecorde.hidden = false;
         inputInitials.focus();
       }, 1200);
+    } else if (!eligible) {
+      playGameOver();
     }
   }
 
@@ -633,9 +635,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       let badgeHtml = '';
       if (isHighlighted) {
         if (isPlayerRecord) {
-          badgeHtml = ' <span class="badge-record-tag" title="Seu último recorde registrado">⭐ SEU RECORDE</span>';
+          badgeHtml = ' <span class="badge-record-star" title="Seu recorde">⭐</span>';
         } else {
-          badgeHtml = ' <span class="badge-record-tag leader" title="Atual líder do Hall da Fama">👑 LÍDER</span>';
+          badgeHtml = ' <span class="badge-record-star" title="Atual líder do Hall da Fama">👑</span>';
         }
       }
 
