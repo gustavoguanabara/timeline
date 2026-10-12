@@ -74,18 +74,18 @@
     {
         "id": 9,
         "ano": "1822",
-        "resumo": "Motor Diferencial",
+        "resumo": "Máquina Diferencial",
         "país": "Reino Unido",
-        "texto": "Charles Babbage projetou o Motor Diferencial, máquina a vapor concebida para tabular polinômios e eliminar erros humanos em tabelas matemáticas e astronômicas. Embora o modelo em escala real não tenha sido concluído na época por restrições de usinagem, o projeto provou a viabilidade do cálculo automático.",
+        "texto": "Charles Babbage projetou a Máquina Diferencial, máquina a vapor concebida para tabular polinômios e eliminar erros humanos em tabelas matemáticas e astronômicas. Embora o modelo em escala real não tenha sido concluído na época por restrições de usinagem, o projeto provou a viabilidade do cálculo automático.",
         "categoria": "Inventores e invenções",
         "ref": "motor-diferencial-1822"
     },
     {
         "id": 10,
         "ano": "1837",
-        "resumo": "Motor Analítico",
+        "resumo": "Máquina Analítica",
         "país": "Reino Unido",
-        "texto": "Charles Babbage concebeu o Motor Analítico, o primeiro computador mecânico de uso geral. O projeto continha os quatro blocos fundamentais dos computadores modernos: unidade central de cálculo ('mill'), memória persistente ('store'), leitor de cartões perfurados e mecanismo de saída impressa.",
+        "texto": "Charles Babbage concebeu a Máquina Analítico, o primeiro computador mecânico de uso geral. O projeto continha os quatro blocos fundamentais dos computadores modernos: unidade central de cálculo ('mill'), memória persistente ('store'), leitor de cartões perfurados e mecanismo de saída impressa.",
         "categoria": "Tecnologia surgindo",
         "ref": "motor-analitico-1837"
     },
@@ -103,7 +103,7 @@
         "ano": "1843",
         "resumo": "Primeiro Programa de Código",
         "país": "Reino Unido",
-        "texto": "Ada Lovelace publicou notas sobre o Motor Analítico de Babbage com um algoritmo detalhado para tabular números de Bernoulli. Por esse feito, tornou-se a primeira programadora da história, prevendo também que máquinas computacionais poderiam processar notas musicais, símbolos e textos.",
+        "texto": "Ada Lovelace publicou notas sobre a Motor Analítico de Babbage com um algoritmo detalhado para tabular números de Bernoulli. Por esse feito, tornou-se a primeira programadora da história, prevendo também que máquinas computacionais poderiam processar notas musicais, símbolos e textos.",
         "categoria": "Grandes nomes da Tecnologia",
         "ref": "primeiro-programa-codigo-1843"
     },
@@ -479,7 +479,7 @@
     {
         "id": 54,
         "ano": "1968",
-        "resumo": "A Mãe de Todas as Demos",
+        "resumo": "Apresentação do Mouse e GUI",
         "país": "EUA",
         "texto": "Douglas Engelbart realizou em San Francisco uma conferência de 90 minutos onde revelou simultaneamente o mouse de computador, telas com janelas gráficas, links de hipertexto, edição de texto colaborativa e chamadas de vídeo, estabelecendo a base da interação humana com computadores.",
         "categoria": "Fato histórico",
@@ -677,7 +677,7 @@
     {
         "id": 76,
         "ano": "1977",
-        "resumo": "A Trindade de 1977",
+        "resumo": "A Grande Trindade",
         "país": "EUA",
         "texto": "O lançamento comercial simultâneo do Apple II, do Commodore PET e do TRS-80 da Tandy ficou conhecido como a 'Trindade de 1977'. Esses equipamentos trouxeram gabinetes fechados com teclados embutidos e saída para monitores domésticos, popularizando o microcomputador entre residências e salas de aula.",
         "categoria": "Lançamento de produto",
